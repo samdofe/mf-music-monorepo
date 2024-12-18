@@ -1,0 +1,10 @@
+{
+  "name": "podcast-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/podcast-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["podcast"],
+  "// targets": "to see all targets run: nx show project podcast-e2e --web",
+  "targets": {}
+}

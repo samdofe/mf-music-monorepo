@@ -1,0 +1,16 @@
+{
+  "name": "podcast",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/podcast/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project podcast --web",
+  "targets": {
+    "vitest-ui": {
+      "executor": "nx:run-commands",
+      "options" : {
+        "command": "vitest --config apps/podcast/vite.config.ts --watch --ui"
+      }
+    }
+  }
+}
