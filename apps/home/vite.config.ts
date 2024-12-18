@@ -1,4 +1,4 @@
-/// <reference types="vitest/config" />
+/// <reference types='vitest/config' />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
@@ -6,7 +6,7 @@ import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/apps/shell',
+  cacheDir: '../../node_modules/.vite/apps/home',
   server: {
     port: 4200,
     host: 'localhost',
@@ -21,7 +21,7 @@ export default defineConfig({
   //  plugins: [ nxViteTsPaths() ],
   // },
   build: {
-    outDir: '../../dist/apps/shell',
+    outDir: '../../dist/apps/home',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
@@ -36,7 +36,7 @@ export default defineConfig({
     coverage: {
       enabled: true,
       reporter: ['json', 'lcov', 'text', 'clover', 'html'],
-      reportsDirectory: '../../coverage/apps/shell',
+      reportsDirectory: '../../coverage/apps/home',
       provider: 'v8',
     },
   },
