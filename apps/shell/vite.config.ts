@@ -37,6 +37,7 @@ export default defineConfig({
    * },
    */
   build: {
+    outDir: "../../dist/apps/shell",
     target: 'esnext',
     rollupOptions: {
       output: {
