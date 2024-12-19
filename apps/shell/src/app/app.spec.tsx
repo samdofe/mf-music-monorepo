@@ -1,15 +1,18 @@
 import { render } from '@testing-library/react';
-
 import App from './app';
+
+const renderView = (queryParams?: string) => {
+  return render(<App />);
+}
 
 describe('App', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<App />);
+    const { baseElement } = renderView();
     expect(baseElement).toBeTruthy();
   });
 
   it('should have a greeting as the title', () => {
-    const { getByText } = render(<App />);
-    expect(getByText(/Welcome shell/gi)).toBeTruthy();
+    const { getByText } = renderView();
+    expect(getByText(/SHELL Host App/gi)).toBeTruthy();
   });
 });
