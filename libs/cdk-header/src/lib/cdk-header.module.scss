@@ -1,7 +1,23 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+:root{
+  --title-font-family : Helvetica;
+}
+
+.header{
+  font-family: var(--title-font-family), Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 15px;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  &__title{
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(59 129 184);
+    &:hover{
+     cursor: pointer;
+    }
+  }
+  &__icon{
+
+  }
+}
