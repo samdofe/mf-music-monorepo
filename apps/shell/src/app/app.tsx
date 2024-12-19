@@ -1,11 +1,15 @@
-// Uncomment this line to use CSS modules
-// import styles from './app.module.scss';
-import NxWelcome from './nx-welcome';
+import React, { Suspense } from 'react';
+const PodcastApp = React.lazy(() => import('podcast/PodcastApp'));
+const HomeApp = React.lazy(() => import('home/HomeApp'));
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="shell" />
+      <h1>SHELL Host App</h1>
+      <Suspense fallback={<div>Loading Podcast...</div>}>
+        <HomeApp />
+        <PodcastApp />
+      </Suspense>
     </div>
   );
 }
