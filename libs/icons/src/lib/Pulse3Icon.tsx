@@ -25,6 +25,4 @@ export const Pulse3Icon = (): ReactElement => {
   )
 }
 
-export default Pulse3Icon;
-
 
