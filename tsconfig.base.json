@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@inditex/cdk": ["libs/cdk/src/index.ts"],
+      "@inditex/cdk-header": ["libs/cdk-header/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

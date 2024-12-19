@@ -39,6 +39,7 @@ export default defineConfig({
   //  plugins: [ nxViteTsPaths() ],
   // },
   build: {
+    outDir: "../../dist/apps/home",
     target: "esnext",
     rollupOptions: {
       output: {

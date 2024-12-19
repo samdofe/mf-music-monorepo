@@ -1,11 +1,13 @@
 import React, { Suspense } from 'react';
+import { CdkHeader } from "@inditex/cdk";
+
 const PodcastApp = React.lazy(() => import('podcast/PodcastApp'));
 const HomeApp = React.lazy(() => import('home/HomeApp'));
 
 export function App() {
   return (
     <div>
-      <h1>SHELL Host App</h1>
+      <CdkHeader title="Shell host app" />
       <Suspense fallback={<div>Loading Podcast...</div>}>
         <HomeApp />
         <PodcastApp />
