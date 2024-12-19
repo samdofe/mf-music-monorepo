@@ -11,6 +11,7 @@
     "test:all": "nx run utils:test-all",
     "test:project": "nx run $PROJECT:test",
     "test:project:ui": "nx run $PROJECT:vitest-ui",
+    "new:lib": "nx run utils:new-lib",
     "graph": "nx graph"
   },
   "private": true,

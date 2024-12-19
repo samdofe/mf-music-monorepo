@@ -39,9 +39,16 @@
           { "command": "nx run home:test" },
           { "command": "nx run podcast:test" },
           { "command": "nx run shell:test" },
-          { "command": "nx run cdk-header:test" }
+          { "command": "nx run cdk-header:test" },
+          { "command": "nx run icons:test" }
         ],
         "parallel": false
+      }
+    },
+    "new-lib": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx g @nx/react:lib libs/$PROJECT --bundler=vite --publishable=true --importPath=@inditex/$PROJECT"
       }
     }
   }

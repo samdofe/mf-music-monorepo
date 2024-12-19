@@ -1,11 +1,12 @@
 import styles from './cdk-header.module.scss';
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
+import { Pulse3Icon } from '@inditex/icons';
 
-export function CdkHeader({title}: {title: string}): ReactElement {
+export function CdkHeader({title, showIcon=false}: {title: string, showIcon?: boolean}): ReactElement {
   return (
     <div className={styles['header']}>
       <span className={styles['header__title']}>{title}</span>
-      <span className={styles['header__icon']}>icono</span>
+      {showIcon && <i className={styles['header__icon']}><Pulse3Icon /></i>}
     </div>
   );
 }
