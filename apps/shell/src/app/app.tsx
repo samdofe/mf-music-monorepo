@@ -7,7 +7,7 @@ const HomeApp = React.lazy(() => import('home/HomeApp'));*/
 export function App() {
   return (
     <div>
-      <CdkHeader title="Podcaster" />
+      <CdkHeader title="Podcaster" showIcon={true} />
       <Suspense fallback={<div>Loading Podcast...</div>}>
 {/*        <HomeApp />
         <PodcastApp />*/}

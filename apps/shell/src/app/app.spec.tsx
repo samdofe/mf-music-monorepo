@@ -11,8 +11,8 @@ describe('App', () => {
     expect(baseElement).toBeTruthy();
   });
 
-  it('should have a greeting as the title', () => {
+  it('should have a Podcaster title', () => {
     const { getByText } = renderView();
-    expect(getByText(/SHELL Host App/gi)).toBeTruthy();
+    expect(getByText(/Podcaster/gi)).toBeTruthy();
   });
 });
