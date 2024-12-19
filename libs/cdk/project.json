@@ -1,0 +1,9 @@
+{
+  "name": "cdk",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/cdk/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project cdk --web",
+  "targets": {}
+}

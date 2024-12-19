@@ -1,0 +1,48 @@
+{
+  "name": "utils",
+  "targets": {
+    "serve-multiple": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          { "command": "nx run home:preview" },
+          { "command": "nx run podcast:preview" },
+          { "command": "nx run shell:serve" }
+        ],
+        "parallel": true
+      }
+    },
+    "build-apps": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          { "command": "nx reset" },
+          { "command": "nx run-many -t build -p home podcast shell" }
+        ],
+        "parallel": false
+      }
+    },
+    "build-libs": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          { "command": "nx reset" },
+          { "command": "nx run-many -t build -p cdk-header cdk" }
+        ],
+        "parallel": false
+      }
+    },
+    "test-all": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          { "command": "nx run home:test" },
+          { "command": "nx run podcast:test" },
+          { "command": "nx run shell:test" },
+          { "command": "nx run cdk-header:test" }
+        ],
+        "parallel": false
+      }
+    }
+  }
+}
