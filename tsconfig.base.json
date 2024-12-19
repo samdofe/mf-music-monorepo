@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@inditex/cdk": ["libs/cdk/src/index.ts"],
-      "@inditex/cdk-header": ["libs/cdk-header/src/index.ts"]
+      "@inditex/cdk-header": ["libs/cdk-header/src/index.ts"],
+      "@inditex/icons": ["libs/icons/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

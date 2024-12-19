@@ -1,5 +1,7 @@
 :root{
   --title-font-family : Helvetica;
+  --primary-color: rgb(59 129 184);
+  --shadow-color: rgba(0, 0, 0, 0.2);
 }
 
 .header{
@@ -8,16 +10,16 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 20px 15px;
-  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 2px -2px var(--shadow-color);
   &__title{
     font-size: 18px;
     font-weight: bold;
-    color: rgb(59 129 184);
+    color: var(--primary-color);
     &:hover{
      cursor: pointer;
     }
   }
-  &__icon{
-
+  &__icon > svg {
+    fill: var(--primary-color);
   }
 }

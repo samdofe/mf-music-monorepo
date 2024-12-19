@@ -1,5 +1,5 @@
 {
-  "name": "@inditex/cdk-header",
+  "name": "@inditex/icons",
   "version": "0.0.1",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -8,8 +8,5 @@
       "import": "./index.mjs",
       "require": "./index.js"
     }
-  },
-  "peerDependencies": {
-    "@inditex/icons": "0.0.1"
   }
 }
