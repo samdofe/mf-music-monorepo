@@ -1,4 +1,4 @@
-/// <reference types='vitest/config' />
+/// <reference types='vitest' />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
@@ -10,11 +10,11 @@ export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/apps/home',
   server: {
-    port: 4202,
+    port: 4201,
     host: 'localhost',
   },
   preview: {
-    port: 4302,
+    port: 4301,
     host: 'localhost',
   },
   plugins: [
@@ -26,12 +26,16 @@ export default defineConfig({
       filename: 'remoteEntry.js',
       exposes: {
         './HomeApp': './src/app/App.tsx',
+        './route-config': './src/app/routes/route-config.tsx',
       },
-      shared: [
-        'react',
-        'react-dom',
-        'react-router-dom'
-      ],
+      shared: {
+        'react': {
+          requiredVersion: '18.3.1',
+        },
+        'react-dom': {
+          requiredVersion: '18.3.1',
+        }
+      }
     }),
   ],
   // Uncomment this if you are using workers.
@@ -40,7 +44,7 @@ export default defineConfig({
   // },
   build: {
     outDir: "../../dist/apps/home",
-    target: "esnext",
+    target: "chrome89",
     rollupOptions: {
       output: {
         format: "esm",
