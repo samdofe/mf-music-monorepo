@@ -10,11 +10,11 @@ export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/apps/podcast',
   server: {
-    port: 4201,
+    port: 4202,
     host: 'localhost'
   },
   preview: {
-    port: 4301,
+    port: 4302,
     host: 'localhost'
   },
   plugins: [
@@ -26,12 +26,16 @@ export default defineConfig({
       filename: 'remoteEntry.js',
       exposes: {
         './PodcastApp': './src/app/App.tsx',
+        './route-config': './src/app/routes/route-config.tsx',
       },
-      shared: [
-        'react',
-        'react-dom',
-        'react-router-dom'
-      ],
+      shared: {
+        'react': {
+          requiredVersion: '18.3.1',
+        },
+        'react-dom': {
+          requiredVersion: '18.3.1',
+        }
+      },
     }),
   ],
   // Uncomment this if you are using workers.
@@ -40,7 +44,7 @@ export default defineConfig({
   // },
   build: {
     outDir: "../../dist/apps/podcast",
-    target: "esnext",
+    target: "chrome89",
     rollupOptions: {
       output: {
         format: "esm",

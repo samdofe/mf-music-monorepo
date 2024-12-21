@@ -8,7 +8,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
+    "target": "esnext",
     "module": "esnext",
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
@@ -17,7 +17,8 @@
     "paths": {
       "@inditex/cdk": ["libs/cdk/src/index.ts"],
       "@inditex/cdk-header": ["libs/cdk-header/src/index.ts"],
-      "@inditex/icons": ["libs/icons/src/index.ts"]
+      "@inditex/icons": ["libs/icons/src/index.ts"],
+      "@inditex/router": ["libs/router/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
