@@ -1,19 +1,10 @@
-import React, { Suspense } from 'react';
-import { CdkHeader } from "@inditex/cdk";
-import { ThreeDotsScaleIcon } from '@inditex/icons';
+import React, { ReactElement } from 'react';
+import { createBrowserRouter } from 'react-router-dom';
+import { RouterProviderWrapper } from '@inditex/router';
+import routes from './routes/route-config';
 
-/*const PodcastApp = React.lazy(() => import('podcast/PodcastApp'));
-const HomeApp = React.lazy(() => import('home/HomeApp'));*/
+const router = createBrowserRouter(routes);
 
-export default function App() {
-  return (
-    <div>
-      <CdkHeader title="Podcaster" showIcon={true} />
-      <Suspense fallback={<div>Loading Podcast...</div>}>
-        <ThreeDotsScaleIcon />
-{/*        <HomeApp />
-        <PodcastApp />*/}
-      </Suspense>
-    </div>
-  );
+export default function App(): ReactElement {
+  return  <RouterProviderWrapper router={router} />
 }

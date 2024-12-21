@@ -1,7 +1,10 @@
+import React from 'react';
+import { RouterProviderWrapper } from '@inditex/router';
+import { createBrowserRouter } from 'react-router-dom';
+import routes from './routes/route-config';
+
+const router = createBrowserRouter(routes);
+
 export default function App() {
-  return (
-    <div>
-      <h1>HOME Remote app</h1>
-    </div>
-  );
+  return <RouterProviderWrapper router={router} />;
 }

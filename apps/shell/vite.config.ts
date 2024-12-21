@@ -24,10 +24,17 @@ export default defineConfig({
     federation({
       name: 'shell',
       remotes: {
-        home: 'http://localhost:4302/assets/remoteEntry.js',
-        podcast: 'http://localhost:4301/assets/remoteEntry.js'
+        home: "http://localhost:4301/assets/remoteEntry.js",
+        podcast: "http://localhost:4302/assets/remoteEntry.js",
       },
-      shared: ['react', 'react-dom', 'react-router-dom']
+      shared: {
+        'react': {
+          version: '18.3.1'
+        },
+        'react-dom': {
+          version: '18.3.1'
+        }
+      }
     })
   ],
   /*
@@ -37,8 +44,8 @@ export default defineConfig({
    * },
    */
   build: {
-    outDir: "../../dist/apps/shell",
-    target: 'esnext',
+    outDir: '../../dist/apps/shell',
+    target: 'chrome89',
     rollupOptions: {
       output: {
         format: 'esm',
