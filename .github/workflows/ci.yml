@@ -30,7 +30,16 @@ jobs:
           node-version: 22
           cache: 'pnpm'
 
-      - run: pnpm install --frozen-lockfile
+      # Install and activate the specific pnpm version from package.json
+      - name: Install and activate pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@9.15.1 --activate
+
+      # Install dependencies using pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
       - run: pnpm exec cypress install
       - uses: nrwl/nx-set-shas@v4
 
