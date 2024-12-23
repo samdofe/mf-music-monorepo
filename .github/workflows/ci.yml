@@ -30,11 +30,13 @@ jobs:
           node-version: 22
           cache: 'pnpm'
 
-      # Install and activate the specific pnpm version from package.json
-      - name: Install and activate pnpm
-        run: |
-          corepack enable
-          corepack prepare pnpm@9.15.1 --activate
+      # Instalar manualmente pnpm en la versión correcta
+      - name: Install pnpm
+        run: npm install -g pnpm@9.15.1
+
+      # Confirmar instalación de pnpm
+      - name: Verify pnpm version
+        run: pnpm --version
 
       # Install dependencies using pnpm
       - name: Install dependencies
