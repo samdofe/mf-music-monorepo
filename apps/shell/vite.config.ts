@@ -28,7 +28,7 @@ export default defineConfig({
         home: "http://localhost:4301/assets/remoteEntry.js",
         podcast: "http://localhost:4302/assets/remoteEntry.js"
       },
-      shared: ["react", "react-dom", "react-router-dom"],
+      shared: ["react", "react-dom", "react-router-dom", "@tanstack/react-query"],
     })
   ],
   /*

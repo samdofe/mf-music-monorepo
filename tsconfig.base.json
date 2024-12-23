@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@inditex/api": ["libs/api/src/index.ts"],
       "@inditex/cdk": ["libs/cdk/src/index.ts"],
       "@inditex/cdk-header": ["libs/cdk-header/src/index.ts"],
       "@inditex/icons": ["libs/icons/src/index.ts"],
