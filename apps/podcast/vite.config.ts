@@ -25,17 +25,9 @@ export default defineConfig({
       name: 'podcast',
       filename: 'remoteEntry.js',
       exposes: {
-        './PodcastApp': './src/app/App.tsx',
-        './route-config': './src/app/routes/route-config.tsx',
+        './PodcastApp': './src/app/App.tsx'
       },
-      shared: {
-        'react': {
-          requiredVersion: '18.3.1',
-        },
-        'react-dom': {
-          requiredVersion: '18.3.1',
-        }
-      },
+      shared: ["react", "react-dom", "react-router-dom"],
     }),
   ],
   // Uncomment this if you are using workers.
@@ -43,14 +35,11 @@ export default defineConfig({
   //  plugins: [ nxViteTsPaths() ],
   // },
   build: {
+    modulePreload: false,
     outDir: "../../dist/apps/podcast",
-    target: "chrome89",
-    rollupOptions: {
-      output: {
-        format: "esm",
-        entryFileNames: "assets/[name].js",
-      },
-    },
+    target: "esnext",
+    minify: false,
+    sourcemap: true, // Generate source maps for debugging
   },
   test: {
     watch: false,
