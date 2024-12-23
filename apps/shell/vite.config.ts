@@ -5,6 +5,7 @@ import {nxViteTsPaths} from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import {nxCopyAssetsPlugin} from '@nx/vite/plugins/nx-copy-assets.plugin';
 import federation from '@originjs/vite-plugin-federation';
 import {configDefaults} from 'vitest/config';
+//const deps = require("./package.json").dependencies;
 
 export default defineConfig({
   root: __dirname,
@@ -25,16 +26,9 @@ export default defineConfig({
       name: 'shell',
       remotes: {
         home: "http://localhost:4301/assets/remoteEntry.js",
-        podcast: "http://localhost:4302/assets/remoteEntry.js",
+        podcast: "http://localhost:4302/assets/remoteEntry.js"
       },
-      shared: {
-        'react': {
-          version: '18.3.1'
-        },
-        'react-dom': {
-          version: '18.3.1'
-        }
-      }
+      shared: ["react", "react-dom", "react-router-dom"],
     })
   ],
   /*
@@ -44,14 +38,11 @@ export default defineConfig({
    * },
    */
   build: {
+    modulePreload: false,
     outDir: '../../dist/apps/shell',
-    target: 'chrome89',
-    rollupOptions: {
-      output: {
-        format: 'esm',
-        entryFileNames: 'assets/[name].js'
-      }
-    }
+    target: 'esnext',
+    minify: false,
+    sourcemap: true,
   },
   test: {
     watch: false,

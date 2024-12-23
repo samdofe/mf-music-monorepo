@@ -5,9 +5,10 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
+          { "command": "nx watch --all" },
           { "command": "nx run home:preview" },
           { "command": "nx run podcast:preview" },
-          { "command": "nx run shell:serve" }
+          { "command": "nx run shell:preview" }
         ],
         "parallel": true
       }
