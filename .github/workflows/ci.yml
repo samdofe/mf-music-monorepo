@@ -30,7 +30,11 @@ jobs:
           node-version: 22
           cache: 'pnpm'
 
-      - run: corepack enable pnpm
+      # Install and activate pnpm
+      - name: Install and activate pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
       - run: pnpm ci --legacy-peer-deps
       - run: npx cypress install
       - uses: nrwl/nx-set-shas@v4
