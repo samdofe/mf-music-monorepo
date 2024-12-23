@@ -1,10 +1,8 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
-import { RouterProviderWrapper } from '@inditex/router';
-import routes from './routes/route-config';
-
-const router = createBrowserRouter(routes);
+import { Routes } from 'react-router-dom';
+import routes from './routing/route-config';
+import { renderRoutes } from '@inditex/router';
 
 export default function App() {
-  return <RouterProviderWrapper router={router}/>
+  return <Routes>{renderRoutes(routes)}</Routes>;
 }

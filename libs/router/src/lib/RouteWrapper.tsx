@@ -1,17 +1,12 @@
-import { ReactElement, ReactNode, Suspense } from 'react';
+import { ReactElement, Suspense } from 'react';
 import { Navigate } from 'react-router-dom';
-
-export interface IRouterWrapperProps {
-  element: ReactNode;
-  isProtected?: boolean;
-  fallback?: string;
-}
+import { IRouteWrapperProps } from './router.model';
 
 export const RouteWrapper = ({
   element,
   isProtected = false,
   fallback = "/",
-}: IRouterWrapperProps): ReactElement => {
+}: IRouteWrapperProps): ReactElement => {
   return isProtected ? (
     <Navigate to={fallback} />
     ) : (
