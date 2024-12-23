@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { RouteObject, useNavigate } from 'react-router-dom';
+import { usePodcastLoad } from '@api';
 
 const useDelayedNavigation = () => {
   const navigate = useNavigate();
@@ -10,6 +11,7 @@ const useDelayedNavigation = () => {
 };
 
 const HomeLayout = (): ReactElement => {
+  const {data} = usePodcastLoad();
   const navigate = useDelayedNavigation();
 
   const gotToPodcast = ()=>{
@@ -18,11 +20,14 @@ const HomeLayout = (): ReactElement => {
 
   return (
     <div>
-      <h1>HOME Remote app!! YEahh</h1>
+      <h1>HOME Remote app!!</h1>
       <button onClick={gotToPodcast}>Go to Podcast</button>
+      {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
     </div>
   );
 };
+
+
 
 const routes: RouteObject[] = [
   {
