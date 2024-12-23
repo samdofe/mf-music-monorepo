@@ -5,10 +5,10 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          { "command": "nx watch --all" },
           { "command": "nx run home:preview" },
           { "command": "nx run podcast:preview" },
-          { "command": "nx run shell:preview" }
+          { "command": "nx run shell:preview" },
+          { "command":  "nx watch --projects=home,podcast,shell --includeDependentProjects -- nx run-many -t preview -p \\$NX_PROJECT_NAME\n"}
         ],
         "parallel": true
       }

@@ -27,7 +27,7 @@ export default defineConfig({
       exposes: {
         './PodcastApp': './src/app/App.tsx'
       },
-      shared: ["react", "react-dom", "react-router-dom"],
+      shared: ["react", "react-dom", "react-router-dom", "@tanstack/react-query"],
     }),
   ],
   // Uncomment this if you are using workers.

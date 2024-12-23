@@ -1,4 +1,5 @@
 /// <reference types='vitest' />
+import path from "path";
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
@@ -8,6 +9,9 @@ import { configDefaults } from 'vitest/config';
 
 export default defineConfig({
   root: __dirname,
+  define: {
+    'process.env': process.env, // Access environment variables in code
+  },
   cacheDir: '../../node_modules/.vite/apps/home',
   server: {
     port: 4201,
@@ -27,7 +31,7 @@ export default defineConfig({
       exposes: {
         './HomeApp': './src/app/App.tsx',
       },
-      shared: ["react", "react-dom", "react-router-dom"],
+      shared: ["react", "react-dom", "react-router-dom", "@tanstack/react-query"],
     }),
   ],
   // Uncomment this if you are using workers.
@@ -40,6 +44,11 @@ export default defineConfig({
     target: "esnext",
     minify: false,
     sourcemap: true,
+  },
+  resolve: {
+    alias: {
+      "@api": `${path.resolve(__dirname, "./src/api/index")}`,
+    },
   },
   test: {
     watch: false,
