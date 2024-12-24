@@ -27,7 +27,12 @@ export default defineConfig({
       exposes: {
         './PodcastApp': './src/app/App.tsx'
       },
-      shared: ["react", "react-dom", "react-router-dom", "@tanstack/react-query"],
+      shared: [
+        "react",
+        "react-dom",
+        "react-router-dom",
+        "@tanstack/react-query"
+      ],
     }),
   ],
   // Uncomment this if you are using workers.
@@ -40,6 +45,7 @@ export default defineConfig({
     target: "esnext",
     minify: false,
     sourcemap: true, // Generate source maps for debugging
+    cssCodeSplit: false,
   },
   test: {
     watch: false,
