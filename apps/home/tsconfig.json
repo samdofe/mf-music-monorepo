@@ -9,6 +9,7 @@
     "baseUrl": ".",
     "paths": {
       "@api": ["src/api/index.ts"],
+      "@pages": ["src/app/pages/index.ts"],
       "@inditex/api": ["../../libs/api/src/index.ts"],
       "@inditex/cdk": ["../../libs/cdk/src/index.ts"],
       "@inditex/cdk-header": ["../../libs/cdk-header/src/index.ts"],

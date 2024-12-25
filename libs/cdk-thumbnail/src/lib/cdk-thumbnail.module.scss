@@ -6,7 +6,7 @@
 }
 
 .cdk-thumbnail {
-  width: 200px;
+  width: 100%;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -26,6 +26,7 @@
   }
   &__title{
     font-size: 12px;
+    font-weight: bold;
   }
   &__sub-title{
     font-size: 12px;

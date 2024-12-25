@@ -1,0 +1,15 @@
+.podcasts{
+  &__filter-container{
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__grid{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 130px;
+    justify-items: center;
+    grid-column-gap: 40px;
+    padding: 20px;
+  }
+}
