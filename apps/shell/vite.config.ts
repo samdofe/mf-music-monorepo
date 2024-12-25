@@ -5,6 +5,7 @@ import {nxViteTsPaths} from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import {nxCopyAssetsPlugin} from '@nx/vite/plugins/nx-copy-assets.plugin';
 import federation from '@originjs/vite-plugin-federation';
 import {configDefaults} from 'vitest/config';
+import path from 'path';
 //const deps = require("./package.json").dependencies;
 
 export default defineConfig({
@@ -49,6 +50,11 @@ export default defineConfig({
     minify: false,
     sourcemap: true,
     cssCodeSplit: false,
+  },
+  resolve: {
+    alias: {
+      "@layouts": `${path.resolve(__dirname, "./src/app/layouts/index")}`,
+    },
   },
   test: {
     watch: false,
