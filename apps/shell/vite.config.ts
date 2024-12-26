@@ -26,7 +26,6 @@ export default defineConfig({
     federation({
       name: 'shell',
       remotes: {
-        home: "http://localhost:4301/assets/remoteEntry.js",
         podcast: "http://localhost:4302/assets/remoteEntry.js"
       },
       shared: [

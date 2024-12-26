@@ -2,7 +2,7 @@ import { api } from '@inditex/api';
 import { IPodcast } from '@models';
 const {VITE_ITUNES_API_DOMAIN, VITE_PODCAST_LOAD_API_CONTEXT} = import.meta.env;
 
-export const podcastLoadQuery = async (): Promise<IPodcast[]>=> {
+export const podcastsLoadQuery = async (): Promise<IPodcast[]>=> {
   const response = await api.get(`
     ${VITE_ITUNES_API_DOMAIN}${VITE_PODCAST_LOAD_API_CONTEXT}/limit=100/genre=1310/json
   `, true);

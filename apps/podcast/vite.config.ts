@@ -5,9 +5,13 @@ import {nxViteTsPaths} from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import {nxCopyAssetsPlugin} from '@nx/vite/plugins/nx-copy-assets.plugin';
 import federation from '@originjs/vite-plugin-federation';
 import { configDefaults } from 'vitest/config';
+import path from 'path';
 
 export default defineConfig({
   root: __dirname,
+  define: {
+    'process.env': process.env, // Access environment variables in code
+  },
   cacheDir: '../../node_modules/.vite/apps/podcast',
   server: {
     port: 4202,
@@ -46,6 +50,13 @@ export default defineConfig({
     minify: false,
     sourcemap: true, // Generate source maps for debugging
     cssCodeSplit: false,
+  },
+  resolve: {
+    alias: {
+      "@api": `${path.resolve(__dirname, "./src/api/index")}`,
+      "@pages": `${path.resolve(__dirname, "./src/pages/index")}`,
+      "@models": `${path.resolve(__dirname, "./src/models/index")}`,
+    },
   },
   test: {
     watch: false,
