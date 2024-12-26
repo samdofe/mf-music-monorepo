@@ -1,0 +1,9 @@
+{
+  "name": "cdk-input-filter",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/cdk-input-filter/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project cdk-input-filter --web",
+  "targets": {}
+}
