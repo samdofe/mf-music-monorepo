@@ -1,6 +1,6 @@
 import React from 'react';
 import { RouteObject } from 'react-router-dom';
-import { PodcastsPage } from '@pages';
+import { PodcastsPage } from '../pages';
 
 
 const routes: RouteObject[] = [

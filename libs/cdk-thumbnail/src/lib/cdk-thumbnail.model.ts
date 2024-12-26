@@ -1,5 +1,6 @@
 export interface ICdkThumbnailProps {
   imgUrl:string;
-  title: string;
+  onThumbnailClick: () => void
   subTitle: string;
+  title: string;
 }

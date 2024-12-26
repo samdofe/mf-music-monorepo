@@ -6,7 +6,9 @@
 }
 
 .cdk-thumbnail {
+  cursor: pointer;
   width: 100%;
+  max-width: 186px;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -15,6 +17,7 @@
   flex-direction: column;
   font-family: var(--title-font-family), Arial, sans-serif;
   box-shadow: 0 2px 4px var(--shadow-color);
+  border-radius: 3px;
   gap: 7px;
   margin-top: 50px;
   padding: 67px 5px 12px 5px;
