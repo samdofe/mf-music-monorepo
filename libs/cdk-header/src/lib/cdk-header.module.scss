@@ -1,11 +1,11 @@
 :root{
-  --title-font-family : Helvetica;
-  --primary-color: rgb(59 129 184);
+  --font-family : Roboto;
+  --primary-color: rgb(59, 129, 184);
   --shadow-color: rgba(0, 0, 0, 0.2);
 }
 
 .header{
-  font-family: var(--title-font-family), Arial, sans-serif;
+  font-family: var(font-family), Arial, sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

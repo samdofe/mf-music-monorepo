@@ -1,0 +1,36 @@
+:root{
+  --font-family : Roboto;
+  --title-font-family : Helvetica;
+  --primary-color: rgb(59, 129, 184);
+  --secondary-color: rgba(133, 135, 136, 1);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --inset-shador-color: rgba(0,0,0,0.03)
+}
+.input-filter{
+  font-family: var(--title-font-family), Arial, sans-serif;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__pill{
+    color: white;
+    text-align: center;
+    background-color: var(--primary-color);
+    width: 42px;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+  &__search-box{
+    height: 30px;
+    width: 250px;
+    padding-left: 8px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    box-shadow: inset 1px 0 2px var(--shadow-color);
+    &::placeholder{
+      color:var(--secondary-color);
+    }
+  }
+}
