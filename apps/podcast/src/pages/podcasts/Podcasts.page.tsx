@@ -1,9 +1,9 @@
 import {useNavigate} from 'react-router-dom';
 import React, {ReactElement, useState} from 'react';
-import {usePodcastLoad} from '@api';
+import {usePodcastsLoad} from '@api';
 import {ThreeDotsScaleIcon} from '@inditex/icons';
-import styles from './podcasts.page.module.scss';
 import { CdkInputFilter, CdkThumbnail } from '@inditex/cdk';
+import styles from './podcasts.page.module.scss';
 
 const useDelayedNavigation = () => {
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ const useDelayedNavigation = () => {
 };
 
 export const PodcastsPage = (): ReactElement => {
-  const {data, isFetching} = usePodcastLoad();
+  const {data, isFetching} = usePodcastsLoad();
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState<string>('');
 
@@ -42,6 +42,7 @@ export const PodcastsPage = (): ReactElement => {
       <div className={styles['podcasts__grid']}>
         {filteredData.map(({image, name, artist, id}) => (
           <CdkThumbnail
+            key={id.attributes?.id}
             imgUrl={image[2].label}
             title={name.label.toUpperCase()}
             subTitle={`Author: ${artist.label}`}

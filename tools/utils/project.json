@@ -5,10 +5,9 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          { "command": "nx run home:preview" },
           { "command": "nx run podcast:preview" },
           { "command": "nx run shell:preview" },
-          { "command":  "nx watch --projects=home,podcast,shell --includeDependentProjects -- nx run-many -t preview -p \\$NX_PROJECT_NAME\n"}
+          { "command":  "nx watch --projects=podcast,shell --includeDependentProjects -- nx run-many -t preview -p \\$NX_PROJECT_NAME\n"}
         ],
         "parallel": true
       }
@@ -18,7 +17,7 @@
       "options": {
         "commands": [
           { "command": "nx reset" },
-          { "command": "nx run-many -t build -p home podcast shell" }
+          { "command": "nx run-many -t build -p podcast shell" }
         ],
         "parallel": false
       }
@@ -37,7 +36,6 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          { "command": "nx run home:test" },
           { "command": "nx run podcast:test" },
           { "command": "nx run shell:test" },
           { "command": "nx run cdk-header:test" },
