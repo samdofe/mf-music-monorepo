@@ -1,7 +1,13 @@
-import React from 'react';
-import PodcastApp from 'podcast/PodcastApp';
-import HomeApp from 'home/HomeApp';
+import React, { lazy } from 'react';
 import { ShellLayoutComponent } from '@layouts';
+import { Navigate } from 'react-router-dom';
+import { RouteWrapper } from '@inditex/router';
+
+const PodcastApp = lazy(() =>
+  import('podcast/PodcastApp').catch(() => {
+    return { default: () => <div>Error Loading PodcastApp</div> };
+  })
+);
 
 export const routes: any[] = [
   {
@@ -9,11 +15,11 @@ export const routes: any[] = [
     element: <ShellLayoutComponent />,
     children: [
       {
-        index: true,
-        element: <HomeApp />
+        index:true,
+        element: <PodcastApp />
       },
       {
-        path: '/podcast/*',
+        path: '/*',
         element: <PodcastApp />
       }
     ]
