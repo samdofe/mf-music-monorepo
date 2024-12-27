@@ -10,6 +10,7 @@
     "paths": {
       "@api": ["src/api/index.ts"],
       "@models": ["src/models/index.ts"],
+      "@hooks": ["src/hooks/index.ts"],
       "@layouts": ["src/layouts/index.ts"],
       "@pages": ["src/pages/index.ts"],
       "@store": ["src/store/index.ts"],

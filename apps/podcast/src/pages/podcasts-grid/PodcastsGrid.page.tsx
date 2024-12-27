@@ -3,20 +3,14 @@ import React, {ReactElement, useState} from 'react';
 import { CdkInputFilter, CdkThumbnail } from '@inditex/cdk';
 import { usePodcastStore } from '@store';
 import styles from './PodcastsGrid.page.module.scss';
+import { useFilteredData } from '@hooks';
 
 export const PodcastsGridPage = (): ReactElement => {
   const navigate = useNavigate();
   const [podcastStore] = usePodcastStore();
   const {podcasts} = podcastStore;
   const [searchQuery, setSearchQuery] = useState<string>('');
-
-  const filteredData = podcasts?.filter((podcast) => {
-    const matchesName = podcast.name.label.toLowerCase().includes(searchQuery.toLowerCase());
-
-    const matchesAuthor = podcast.artist.label.toLowerCase().includes(searchQuery.toLowerCase());
-
-    return matchesName || matchesAuthor;
-  });
+  const filteredData = useFilteredData({podcasts, searchQuery});
 
   return filteredData ? (
     <div className={styles['podcasts']}>
