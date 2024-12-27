@@ -7,7 +7,7 @@ export const podcastDetailQuery = async (podcastId: string | number)=> {
   `, true);
 
   if (!response.ok) {
-    throw new Error('Error fetching podcasts from Itunes');
+    throw new Error('Error fetching podcasts-grid from Itunes');
   }
 
   const text = await response.text();

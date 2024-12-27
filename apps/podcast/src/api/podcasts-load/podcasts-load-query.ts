@@ -8,10 +8,10 @@ export const podcastsLoadQuery = async (): Promise<IPodcast[]>=> {
   `, true);
 
   if (!response.ok) {
-    throw new Error('Error fetching podcasts from Itunes');
+    throw new Error('Error fetching podcasts-grid from Itunes');
   }
 
   const {contents} = await response.json();
   const { entry } = JSON.parse(contents.replaceAll("im:", "")).feed;
-  return entry.map(({artist, image, name, id}: IPodcast) => ({artist, image, name, id}));
+  return entry.map(({artist, image, name, id, summary}: IPodcast) => ({artist, image, name, id, summary}));
 }

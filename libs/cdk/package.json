@@ -11,7 +11,9 @@
     }
   },
   "dependencies": {
+    "@inditex/cdk-card": "0.0.1",
     "@inditex/cdk-header": "0.0.1",
+    "@inditex/cdk-input-filter": "0.0.1",
     "@inditex/cdk-thumbnail": "0.0.1"
   }
 }
