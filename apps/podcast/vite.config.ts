@@ -54,8 +54,10 @@ export default defineConfig({
   resolve: {
     alias: {
       "@api": `${path.resolve(__dirname, "./src/api/index")}`,
-      "@pages": `${path.resolve(__dirname, "./src/pages/index")}`,
       "@models": `${path.resolve(__dirname, "./src/models/index")}`,
+      "@layouts": `${path.resolve(__dirname, "./src/layouts/index")}`,
+      "@pages": `${path.resolve(__dirname, "./src/pages/index")}`,
+      "@store": `${path.resolve(__dirname, "./src/store/index")}`,
     },
   },
   test: {

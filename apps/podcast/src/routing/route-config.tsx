@@ -1,30 +1,20 @@
 import React from 'react';
-import {Link, Outlet, RouteObject} from 'react-router-dom';
-import {RouteWrapper} from '@inditex/router';
-import {PodcastsPage} from '@pages';
+import {Link, RouteObject} from 'react-router-dom';
+import { PodcastDetailsPage, PodcastsGridPage } from '@pages';
+import { PodcastsLayout } from '@layouts';
 
 const routes: RouteObject[] = [
   {
     path: '/',
-    element: <Outlet />,
+    element: <PodcastsLayout /> ,
     children: [
       {
         path: '',
-        element: <PodcastsPage />
+        element: <PodcastsGridPage />
       },
       {
         path: 'podcast/:id',
-        element: (
-          <RouteWrapper
-            element={
-              <div>
-                <h1>PODCAST ID PAGE</h1>
-                Link to <Link to={`/`}>HOME</Link>
-                <Outlet />
-              </div>
-            }
-          />
-        ),
+        element: <PodcastDetailsPage />,
         children: [
           {
             path: 'episode/:id',

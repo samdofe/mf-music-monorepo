@@ -9,8 +9,10 @@
     "baseUrl": ".",
     "paths": {
       "@api": ["src/api/index.ts"],
-      "@pages": ["src/pages/index.ts"],
       "@models": ["src/models/index.ts"],
+      "@layouts": ["src/layouts/index.ts"],
+      "@pages": ["src/pages/index.ts"],
+      "@store": ["src/store/index.ts"],
       "@inditex/api": ["../../libs/api/src/index.ts"],
       "@inditex/cdk": ["../../libs/cdk/src/index.ts"],
       "@inditex/icons": ["../../libs/icons/src/index.ts"],
