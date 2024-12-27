@@ -1,0 +1,16 @@
+{
+  "name": "cdk-card",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/cdk-card/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project cdk-card --web",
+  "targets": {
+    "vitest-ui": {
+      "executor": "nx:run-commands",
+      "options" : {
+        "command": "vitest --config libs/cdk-header/vite.config.ts --watch --ui"
+      }
+    }
+  }
+}

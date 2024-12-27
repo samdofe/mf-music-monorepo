@@ -1,24 +1,16 @@
 import {useNavigate} from 'react-router-dom';
 import React, {ReactElement, useState} from 'react';
-import {usePodcastsLoad} from '@api';
-import {ThreeDotsScaleIcon} from '@inditex/icons';
 import { CdkInputFilter, CdkThumbnail } from '@inditex/cdk';
-import styles from './podcasts.page.module.scss';
+import { usePodcastStore } from '@store';
+import styles from './PodcastsGrid.page.module.scss';
 
-const useDelayedNavigation = () => {
+export const PodcastsGridPage = (): ReactElement => {
   const navigate = useNavigate();
-
-  return (to: string, options?: any) => {
-    setTimeout(() => navigate(to, options), 3000); // Delay navigation by 3 seconds
-  };
-};
-
-export const PodcastsPage = (): ReactElement => {
-  const {data, isFetching} = usePodcastsLoad();
-  const navigate = useNavigate();
+  const [podcastStore] = usePodcastStore();
+  const {podcasts} = podcastStore;
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const filteredData = data?.filter((podcast) => {
+  const filteredData = podcasts?.filter((podcast) => {
     const matchesName = podcast.name.label.toLowerCase().includes(searchQuery.toLowerCase());
 
     const matchesAuthor = podcast.artist.label.toLowerCase().includes(searchQuery.toLowerCase());
@@ -26,21 +18,19 @@ export const PodcastsPage = (): ReactElement => {
     return matchesName || matchesAuthor;
   });
 
-  return isFetching ? (
-    <div style={{width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-      <ThreeDotsScaleIcon />
-    </div>
-  ) : filteredData ? (
+  return filteredData ? (
     <div className={styles['podcasts']}>
       <div className={styles['podcasts__filter-container']}>
         <CdkInputFilter
           totalResults={filteredData.length}
-          placeholder={'Filter podcasts...'}
+          placeholder={'Filter podcasts-grid...'}
           onSearchChange={setSearchQuery}
         />
       </div>
       <div className={styles['podcasts__grid']}>
-        {filteredData.map(({image, name, artist, id}) => (
+        {filteredData.map((podcast) => {
+          const {image, name, artist, id} = podcast;
+          return (
           <CdkThumbnail
             key={id.attributes?.id}
             imgUrl={image[2].label}
@@ -48,14 +38,10 @@ export const PodcastsPage = (): ReactElement => {
             subTitle={`Author: ${artist.label}`}
             onThumbnailClick={()=> navigate(`/podcast/${id.attributes?.id}`)}
           />
-        ))}
+        )})}
       </div>
     </div>
-  ) : (
-    <div>
-      <p>NO RESULTS FOUND</p>
-    </div>
-  );
+  ) : <div></div>
 };
 
-export default PodcastsPage;
+export default PodcastsGridPage;
