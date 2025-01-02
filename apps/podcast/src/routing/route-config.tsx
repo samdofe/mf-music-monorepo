@@ -13,11 +13,11 @@ const routes: RouteObject[] = [
         element: <PodcastsGridPage />
       },
       {
-        path: 'podcast/:id',
+        path: 'podcast/:podcastId',
         element: <PodcastDetailsPage />,
         children: [
           {
-            path: 'episode/:id',
+            path: 'episode/:episodeId',
             element: (
               <div>
                 <Link to="/podcast/1234">Click here to go back to Podcast page.</Link>

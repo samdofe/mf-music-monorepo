@@ -26,19 +26,15 @@ export interface IEpisode {
   TrackTimeMillis: number;
 }
 
-export interface IEpisodeDetails {
+export interface IEpisodesList {
   resultCount: number,
   episodes: IEpisode[]
 }
 
-export interface ISelectedPodcast {
-  podcast: IPodcast;
-  episodeDetails?: IEpisodeDetails;
-}
-
 export interface IPodcastStore {
   podcasts: IPodcast[];
-  selectedPodcast?: ISelectedPodcast;
+  selectedPodcast?: IPodcast;
+  episodesList?: IEpisodesList;
 }
 
 export type TPodcastContextType = [IPodcastStore, Dispatch<SetStateAction<IPodcastStore>>];
