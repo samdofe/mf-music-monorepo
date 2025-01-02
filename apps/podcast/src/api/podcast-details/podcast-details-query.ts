@@ -10,6 +10,11 @@ export const podcastDetailQuery = async (podcastId: string | number)=> {
     throw new Error('Error fetching podcasts-grid from Itunes');
   }
 
-  const text = await response.text();
-  return JSON.parse(text);
+  const {contents} = await response.json();
+  const {results} = JSON.parse(contents);
+  results.shift();
+  return {
+    resultCount: results.length,
+    episodes: results
+  };
 }

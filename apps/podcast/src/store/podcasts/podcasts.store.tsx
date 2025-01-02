@@ -1,4 +1,4 @@
-import { createContext, PropsWithChildren, ReactElement, useContext, useState } from 'react';
+import { createContext, PropsWithChildren, ReactElement, useState } from 'react';
 import { IPodcastStore, TPodcastContextType } from '@models';
 
 export const DEFAULT_PODCAST_STATE: IPodcastStore = {
@@ -29,45 +29,43 @@ export const DEFAULT_PODCAST_STATE: IPodcastStore = {
     }
   }],
   selectedPodcast: {
-    podcast: {
-      artist: {
-        label: 'DEFAULT_SELECTED_PODCAST_ARTIST',
-        attributes: {
-          href: ''
-        }
-      },
-      id: {
-        label: 'DEFAULT_SELECTED_PODCAST_ID',
-        attributes: {
-          id: '0'
-        }
-      },
-      image: [{
-        label: 'DEFAULT_SELECTED_PODCAST_IMAGE',
-        attributes: {
-          height: ''
-        }
-      }],
-      name: {
-        label: 'DEFAULT_SELECTED_PODCAST_NAME'
-      },
-      summary: {
-        label: 'DEFAULT_SELECTED_PODCAST_SUMMARY'
+    artist: {
+      label: 'DEFAULT_SELECTED_PODCAST_ARTIST',
+      attributes: {
+        href: ''
       }
     },
-    episodeDetails: {
-      resultCount: 0,
-      episodes: [
-        {
-          description: '',
-          episodeUrl: '',
-          releaseDate: '2024-12-24T10:00:00Z',
-          trackId: 100089,
-          trackName: '',
-          TrackTimeMillis: 3765000
-        }
-      ]
+    id: {
+      label: 'DEFAULT_SELECTED_PODCAST_ID',
+      attributes: {
+        id: '0'
+      }
+    },
+    image: [{
+      label: 'DEFAULT_SELECTED_PODCAST_IMAGE',
+      attributes: {
+        height: ''
+      }
+    }],
+    name: {
+      label: 'DEFAULT_SELECTED_PODCAST_NAME'
+    },
+    summary: {
+      label: 'DEFAULT_SELECTED_PODCAST_SUMMARY'
     }
+  },
+  episodesList: {
+    resultCount: 1,
+    episodes: [
+      {
+        description: '',
+        episodeUrl: '',
+        releaseDate: '2024-12-24T10:00:00Z',
+        trackId: 100089,
+        trackName: '',
+        TrackTimeMillis: 3765000
+      }
+    ]
   }
 };
 
@@ -81,13 +79,4 @@ export const PodcastStoreProvider = ({children}: PropsWithChildren): ReactElemen
     {children}
   </PodcastContext.Provider>
   );
-}
-
-export const usePodcastStore=()=>{
-  const context = useContext(PodcastContext);
-  if(!context){
-    throw new Error(' usePodcastStore must be used within a PodcastStoreProvider');
-  }
-
-  return context;
 }
