@@ -1,1 +1,1 @@
-export * from './podcasts/podcasts.layout';
+export * from './podcasts/Podcasts.layout';

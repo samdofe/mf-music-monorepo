@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import { usePodcastsLoad } from '@api';
 import { ThreeDotsScaleIcon } from '@inditex/icons';
 import React from 'react';
+import styles from './Podcasts.layout.module.scss';
 
 export const PodcastsLayout = ()=>{
   const {data, isFetching} = usePodcastsLoad();
@@ -10,7 +11,9 @@ export const PodcastsLayout = ()=>{
       <ThreeDotsScaleIcon />
     </div>
   ) : data ? (
-    <Outlet />
+    <div className={styles['podcasts-layout']}>
+      <Outlet />
+    </div>
   ) : (
     <div>
       <p>NO RESULTS FOUND</p>
