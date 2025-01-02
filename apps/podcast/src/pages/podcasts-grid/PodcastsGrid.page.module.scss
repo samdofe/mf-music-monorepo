@@ -1,4 +1,4 @@
-.podcasts{
+.podcasts-grid{
   margin-top: 20px;
   &__filter-container{
     display: flex;
@@ -6,13 +6,12 @@
     height: 50px;
     padding-right: 30px;
   }
-  &__grid{
+  &__list{
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 130px;
     justify-items: center;
     grid-column-gap: 24px;
-    padding: 20px;
   }
 }

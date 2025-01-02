@@ -13,15 +13,15 @@ export const PodcastsGridPage = (): ReactElement => {
   const filteredData = useFilteredData({podcasts, searchQuery});
 
   return filteredData ? (
-    <div className={styles['podcasts']}>
-      <div className={styles['podcasts__filter-container']}>
+    <div className={styles['podcasts-grid']}>
+      <div className={styles['podcasts-grid__filter-container']}>
         <CdkInputFilter
           totalResults={filteredData.length}
           placeholder={'Filter podcasts-grid...'}
           onSearchChange={setSearchQuery}
         />
       </div>
-      <div className={styles['podcasts__grid']}>
+      <div className={styles['podcasts-grid__list']}>
         {filteredData.map((podcast) => {
           const {image, name, artist, id} = podcast;
           return (
