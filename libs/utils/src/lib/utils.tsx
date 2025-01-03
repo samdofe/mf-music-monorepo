@@ -24,6 +24,11 @@ export const cdkUtilsTimeFormatter = (milliseconds: number, format: TTimeFormats
       const formattedMinutes = minutes.toString().padStart(2, '0');
       return  `${hours}:${formattedMinutes}`;
     },
+    [TIME_FORMATS.HH_MM_SS]: ()=> {
+      const formattedSeconds = seconds.toString().padStart(2, '0');
+      const formattedMinutes = minutes.toString().padStart(2, '0');
+      return hours === 0 ? `${minutes}:${formattedSeconds}` : `${hours}:${formattedMinutes}:${formattedSeconds}`;
+    },
     [TIME_FORMATS.DEFAULT]: () => ({ d: days, h: hours, m: minutes, s: seconds }),
   }
 
