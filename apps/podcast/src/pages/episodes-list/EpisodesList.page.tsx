@@ -19,16 +19,21 @@ const tableConfig: ICdkTableConfig<IEpisode> = {
     {
       key: 'releaseDate',
       label: 'Date',
-      format: DATE_FORMATS.DATE_LOCALE_STRING
+      format: DATE_FORMATS.DATE_LOCALE_STRING,
+      customStyles: {
+        display: 'flex',
+        alignItems: 'center'
+      },
     },
     {
       key: 'trackTimeMillis',
       label: 'Duration',
       customStyles: {
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        alignItems: 'center'
       },
-      format: TIME_FORMATS.MM_SS
+      format: TIME_FORMATS.HH_MM_SS
     }
   ],
   data: []
