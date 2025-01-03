@@ -16,6 +16,10 @@ const routes: RouteObject[] = [
         path: 'podcast/:podcastId',
         element: <PodcastDetailsPage />,
         children: [
+/*          {
+            index:true,
+            element: <EpisodesListPage />
+          },*/
           {
             path: 'episode/:episodeId',
             element: (

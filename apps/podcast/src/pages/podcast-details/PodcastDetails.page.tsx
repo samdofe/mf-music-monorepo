@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import { Outlet, useParams } from 'react-router-dom';
 import DOMPurify from 'dompurify';
 import { CdkCard, CdkTable, ICdkTableConfig } from '@inditex/cdk';
 import {ThreeDotsScaleIcon} from '@inditex/icons';
@@ -70,11 +70,13 @@ export const PodcastDetailsPage = () => {
           subTitle={artist.label}
           imageUrl={image[2].label}
           description={DOMPurify.sanitize(sanitizeSummary)}
+          onClickHandler={() => {console.log('click on card ...')}}
         />
       </div>
       <div className={styles['podcast-details__episodes']}>
+        <Outlet />
         <BoxTitle title={`Episodes: ${episodesList?.resultCount}`}></BoxTitle>
-        <CdkTable<IEpisode> {...tableConfig}></CdkTable>
+        <CdkTable<IEpisode> {...tableConfig} onRowClickHandler={(episode)=>{console.log('row clicked : ', episode)}}></CdkTable>
       </div>
     </div>
   );

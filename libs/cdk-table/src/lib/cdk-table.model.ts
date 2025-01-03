@@ -17,4 +17,5 @@ export interface ICdkTableConfig<T>{
   headersTemplateStyle: string;
   headers: ICdkHeader[];
   data: T[];
+  onRowClickHandler?: (item:T)=>void;
 }
