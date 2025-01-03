@@ -185,7 +185,11 @@ importers:
 
   libs/cdk-input-filter: {}
 
-  libs/cdk-table: {}
+  libs/cdk-table:
+    dependencies:
+      '@inditex/utils':
+        specifier: workspace:0.0.1
+        version: link:../utils
 
   libs/cdk-thumbnail: {}
 
