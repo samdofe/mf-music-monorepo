@@ -5,6 +5,7 @@ export const TIME_FORMATS = {
   'D': 'time:d',
   'MM_SS': 'time:mm:ss',
   'HH_MM': 'time:hh:mm',
+  'HH_MM_SS': 'time:hh:mm:ss',
   'DEFAULT': 'time:default'
 };
 

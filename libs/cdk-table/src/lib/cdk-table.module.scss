@@ -4,7 +4,7 @@
   --title-font-family : Helvetica;
   --primary-color: rgb(59 129 184);
   --secondary-color: rgba(133, 135, 136, 0.5);
-  --line-color: rgba(233,233,233,1);
+  --line-color: rgba(234,234,234,1);
   --hover-color: rgba(233,233,233,1);
   --background-color: rgba(250,250,250,1);
   --shadow-color: rgba(0, 0, 0, 0.2);
@@ -32,7 +32,7 @@
       border-top: 1px solid var(--line-color);
       background-color: transparent;
       &-even-idx{
-        background-color: var(--line-color);
+        background-color: var(--background-color);
       }
       &:hover{
         cursor: pointer;
@@ -40,10 +40,10 @@
       }
     }
     &__cell{
-      padding: 10px 0;
+
     }
     &__first-column-idx{
-      padding: 0 5px;
+      margin: 10px 5px;
       color: var(--primary-color);
     }
   }
