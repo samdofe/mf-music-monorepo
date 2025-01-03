@@ -9,7 +9,7 @@ import { configDefaults } from 'vitest/config';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/libs/cdk-input-filter',
+  cacheDir: '../../node_modules/.vite/libs/utils',
   plugins: [
     react(),
     nxViteTsPaths(),
@@ -23,7 +23,7 @@ export default defineConfig({
   // Configuration for building your library.
   // See: https://vitejs.dev/guide/build.html#library-mode
   build: {
-    outDir: '../../dist/libs/cdk-input-filter',
+    outDir: '../../dist/libs/utils',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
@@ -32,7 +32,7 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points.
       entry: 'src/index.ts',
-      name: 'cdk-input-filter',
+      name: 'utils',
       fileName: 'index',
       // Change this to the formats you want to support.
       // Don't forget to update your package.json as well.
@@ -60,7 +60,7 @@ export default defineConfig({
         '**/index.ts',
         '**/*.d.ts',
       ],
-      reportsDirectory: '../../coverage/libs/cdk-input-filter',
+      reportsDirectory: '../../coverage/libs/utils',
       provider: 'v8'
     }
   }

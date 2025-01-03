@@ -1,4 +1,5 @@
-export { CdkCard } from "@inditex/cdk-card";
-export { CdkHeader } from "@inditex/cdk-header";
-export { CdkInputFilter} from "@inditex/cdk-input-filter";
-export { CdkThumbnail } from "@inditex/cdk-thumbnail";
+export * from "@inditex/cdk-card";
+export * from "@inditex/cdk-header";
+export * from "@inditex/cdk-input-filter";
+export * from "@inditex/cdk-table";
+export * from "@inditex/cdk-thumbnail";
