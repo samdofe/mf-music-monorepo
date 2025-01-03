@@ -11,9 +11,10 @@
     }
   },
   "dependencies": {
-    "@inditex/cdk-card": "0.0.1",
-    "@inditex/cdk-header": "0.0.1",
-    "@inditex/cdk-input-filter": "0.0.1",
-    "@inditex/cdk-thumbnail": "0.0.1"
+    "@inditex/cdk-card": "workspace:0.0.1",
+    "@inditex/cdk-header": "workspace:0.0.1",
+    "@inditex/cdk-input-filter": "workspace:0.0.1",
+    "@inditex/cdk-table": "workspace:0.0.1",
+    "@inditex/cdk-thumbnail": "workspace:0.0.1"
   }
 }

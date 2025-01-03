@@ -23,7 +23,7 @@ export interface IEpisode {
   releaseDate: string;
   trackId: number;
   trackName: string;
-  TrackTimeMillis: number;
+  trackTimeMillis: number;
 }
 
 export interface IEpisodesList {

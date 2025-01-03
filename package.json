@@ -3,18 +3,22 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start:all:dev": "nx run utils:serve-multiple",
+    "start:all:dev": "nx run @tools/utils:serve-multiple",
     "start:project:dev": " nx run $PROJECT:serve",
     "start:project:preview": " nx run $PROJECT:preview",
-    "build:apps": "nx run utils:build-apps",
-    "build:libs": "nx run utils:build-libs",
-    "test:all": "nx run utils:test-all",
+    "build:apps": "nx run @tools/utils:build-apps",
+    "build:libs": "nx run @tools/utils:build-libs",
+    "test:all": "nx run @tools/utils:test-all",
     "test:project": "nx run $PROJECT:test",
     "test:project:ui": "nx run $PROJECT:vitest-ui",
-    "new:lib": "nx run utils:new-lib",
+    "new:lib": "nx run @tools/utils:new-lib",
     "graph": "nx graph"
   },
   "private": true,
+  "workspaces": [
+    "libs/*",
+    "apps/*"
+  ],
   "dependencies": {
     "@tanstack/react-query": "^5.62.9",
     "dompurify": "^3.2.3",
