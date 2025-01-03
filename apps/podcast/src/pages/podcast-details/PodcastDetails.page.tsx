@@ -19,7 +19,11 @@ const tableConfig: ICdkTableConfig<IEpisode> = {
   headers: [
     {
       key: 'trackName',
-      label: 'Title'
+      label: 'Title',
+      customStyles: {
+        display: 'flex',
+        alignItems: 'center'
+      },
     },
     {
       key: 'releaseDate',

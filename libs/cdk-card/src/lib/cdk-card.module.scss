@@ -1,5 +1,6 @@
 :root{
   --font-family : Helvetica;
+  --font-size: 14px;
   --title-font-family : Helvetica;
   --primary-color: rgb(59 129 184);
   --secondary-color: rgba(133, 135, 136, 1);
@@ -10,6 +11,7 @@
 .card {
   display: flex;
   flex-direction: column;
+  font-size: var(--font-size);
   font-family: var(--font-family), sans-serif;
   box-shadow: 0 3px 7px var(--shadow-color);
   border-radius: 3px;
@@ -31,6 +33,7 @@
       cursor: pointer;
     }
     &__title{
+      font-size: 16px;
       font-weight: bold;
     }
     &__sub-title{
