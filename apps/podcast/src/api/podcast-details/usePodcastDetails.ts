@@ -7,7 +7,7 @@ import { useSetEpisodesListSelector } from '@store';
 export const usePodcastDetails = (podcastId:string | number) => {
   const setEpisodesListSelector = useSetEpisodesListSelector();
   const {data, error, isFetching} = useQuery<IEpisodesList, Error, IEpisodesList>({
-    queryKey: ['podcast-details-load'],
+    queryKey: ['podcast-details-load', podcastId],
     queryFn: async () => {
      const response = await podcastDetailQuery(podcastId);
      setEpisodesListSelector(response);
