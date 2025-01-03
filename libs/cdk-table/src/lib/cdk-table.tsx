@@ -3,7 +3,12 @@ import {ICdkTableConfig} from './cdk-table.model';
 import {cdkUtilsFieldFormatter} from '@inditex/utils';
 import styles from './cdk-table.module.scss';
 
-export function CdkTable<T>({headers, headersTemplateStyle, data}: ICdkTableConfig<T>) {
+export function CdkTable<T>({headers, headersTemplateStyle, data, onRowClickHandler}: ICdkTableConfig<T>) {
+  const handleRowClick = (selectedItem: T)=>{
+    if(onRowClickHandler){
+      onRowClickHandler(selectedItem);
+    }
+  }
   return (
     <div className={styles['cdk-table']}>
       <div
@@ -18,6 +23,7 @@ export function CdkTable<T>({headers, headersTemplateStyle, data}: ICdkTableConf
       <div className={styles['cdk-table__body']}>
         {data.map((item, rowIdx) => (
           <div
+            key={rowIdx}
             className={[
               styles['cdk-table__body__row'],
               `${rowIdx % 2 === 0 ? styles['cdk-table__body__row-even-idx'] : styles['']}`
@@ -25,6 +31,7 @@ export function CdkTable<T>({headers, headersTemplateStyle, data}: ICdkTableConf
               .filter(Boolean)
               .join(' ')}
             style={{gridTemplateColumns: `${headersTemplateStyle}`}}
+            onClick={() => {handleRowClick(item)}}
           >
             {headers.map((header, columnIdx) => {
               const {key, format, customStyles} = header;

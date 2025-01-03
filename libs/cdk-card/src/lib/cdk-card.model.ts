@@ -3,4 +3,5 @@ export interface ICdkCardProps{
   imageUrl: string;
   subTitle: string;
   title: string;
+  onClickHandler?: () => void
 }

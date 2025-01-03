@@ -1,11 +1,12 @@
 import styles from './cdk-card.module.scss';
 import { ICdkCardProps } from './cdk-card.model';
 
-export function CdkCard({title, subTitle, imageUrl, description}: ICdkCardProps) {
+export function CdkCard({title, subTitle, imageUrl, description, onClickHandler}: ICdkCardProps) {
+
   return (
     <div className={styles['card']}>
-      <img className={styles['card__image']} src={imageUrl} alt="" />
-      <div className={styles['card__body']}>
+      <img className={styles['card__image']} src={imageUrl} alt="" onClick={onClickHandler}/>
+      <div className={styles['card__body']} onClick={onClickHandler}>
         <span className={styles['card__body__title']}>{title}</span>
         <span className={styles['card__body__sub-title']}>By {subTitle}</span>
       </div>
