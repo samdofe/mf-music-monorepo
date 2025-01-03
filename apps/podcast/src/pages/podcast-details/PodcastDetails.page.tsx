@@ -45,3 +45,5 @@ export const PodcastDetailsPage = () => {
     </div>
   );
 };
+
+export default PodcastDetailsPage

@@ -38,7 +38,7 @@ export const useSetPodcastsSelector = ()=>{
 export const useSetSelectedPodcastSelector = ()=>{
   const [ podcastStore , setPodcastStore] = usePodcastStore();
 
-  return (selectedPodcast: IPodcast | undefined)=> setPodcastStore({
+  return (selectedPodcast: IPodcast)=> setPodcastStore({
     ...podcastStore,
     selectedPodcast: selectedPodcast
   });
@@ -47,7 +47,7 @@ export const useSetSelectedPodcastSelector = ()=>{
 
 export const useSetEpisodesListSelector = ()=>{
   const [ podcastStore , setPodcastStore] = usePodcastStore();
-  return (episodesList: IEpisodesList | undefined)=>
+  return (episodesList: IEpisodesList)=>
   setPodcastStore({
     ...podcastStore,
     episodesList: episodesList

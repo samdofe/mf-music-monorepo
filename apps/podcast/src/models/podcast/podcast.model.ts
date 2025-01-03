@@ -33,8 +33,8 @@ export interface IEpisodesList {
 
 export interface IPodcastStore {
   podcasts: IPodcast[];
-  selectedPodcast?: IPodcast;
-  episodesList?: IEpisodesList;
+  selectedPodcast: IPodcast;
+  episodesList: IEpisodesList;
 }
 
 export type TPodcastContextType = [IPodcastStore, Dispatch<SetStateAction<IPodcastStore>>];
