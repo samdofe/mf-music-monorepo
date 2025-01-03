@@ -9,6 +9,7 @@ import {
   useSetSelectedPodcastSelector
 } from '@store';
 import styles from './PodcastDetails.page.module.scss';
+import { Loader } from '@ui';
 
 export const PodcastDetailsPage = () => {
   const {podcastId} = useParams();
@@ -25,9 +26,7 @@ export const PodcastDetailsPage = () => {
   }, []);
 
   return isFetching ? (
-    <div style={{width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-      <ThreeDotsScaleIcon />
-    </div>
+    <Loader />
   ) : (
     <div className={styles['podcast-details']}>
       <div className={styles['podcast-details__card']}>
