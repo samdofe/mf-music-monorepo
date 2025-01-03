@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link, RouteObject} from 'react-router-dom';
-import { EpisodesListPage, PodcastDetailsPage, PodcastsGridPage } from '@pages';
+import { RouteObject} from 'react-router-dom';
+import { EpisodePlayerPage, EpisodesListPage, PodcastDetailsPage, PodcastsGridPage } from '@pages';
 import { PodcastsLayout } from '@layouts';
 
 const routes: RouteObject[] = [
@@ -22,11 +22,7 @@ const routes: RouteObject[] = [
           },
           {
             path: 'episode/:episodeId',
-            element: (
-              <div>
-                <Link to="/podcast/788236947">Click here to go back to Podcast page.</Link>
-              </div>
-            )
+            element: <EpisodePlayerPage />
           }
         ]
       }

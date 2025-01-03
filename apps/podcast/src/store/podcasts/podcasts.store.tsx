@@ -58,12 +58,12 @@ export const DEFAULT_PODCAST_STATE: IPodcastStore = {
     resultCount: 1,
     episodes: [
       {
-        description: '',
-        episodeUrl: '',
+        description: 'DEFAULT_EPISODE',
+        episodeUrl: 'DEFAULT_EPISODE',
         releaseDate: '2024-12-24T10:00:00Z',
         trackId: 100089,
-        trackName: '',
-        TrackTimeMillis: 3765000
+        trackName: 'DEFAULT_EPISODE',
+        trackTimeMillis: 3765000
       }
     ]
   }
