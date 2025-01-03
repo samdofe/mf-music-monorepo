@@ -1,30 +1,58 @@
 import React, {useEffect} from 'react';
+import {useParams} from 'react-router-dom';
+import DOMPurify from 'dompurify';
+import { CdkCard, CdkTable, ICdkTableConfig } from '@inditex/cdk';
+import {ThreeDotsScaleIcon} from '@inditex/icons';
+import { DATE_FORMATS, TIME_FORMATS } from '@inditex/utils';
+import {usePodcastDetails} from '@api';
 import {
   useGetEpisodesListSelector,
   useGetPodcastsSelector,
   useSetSelectedPodcastSelector
 } from '@store';
+import { IEpisode } from '@models';
+import { BoxTitle } from '@ui';
 import styles from './PodcastDetails.page.module.scss';
-import {CdkCard} from '@inditex/cdk';
-import DOMPurify from 'dompurify';
-import {useParams} from 'react-router-dom';
-import {usePodcastDetails} from '../../api/podcast-details/usePodcastDetails';
-import {ThreeDotsScaleIcon} from '@inditex/icons';
+
+const tableConfig: ICdkTableConfig<IEpisode> = {
+  headersTemplateStyle: '1fr 80px 100px',
+  headers: [
+    {
+      key: 'trackName',
+      label: 'Title'
+    },
+    {
+      key: 'releaseDate',
+      label: 'Date',
+      format: DATE_FORMATS.DATE_LOCALE_STRING
+    },
+    {
+      key: 'trackTimeMillis',
+      label: 'Duration',
+      customStyles: {
+        display: 'flex',
+        justifyContent: 'center'
+      },
+      format: TIME_FORMATS.MM_SS
+    }
+  ],
+  data: []
+}
 
 export const PodcastDetailsPage = () => {
   const {podcastId} = useParams();
   const {isFetching} = usePodcastDetails(podcastId ?? '');
   const podcasts = useGetPodcastsSelector();
   const episodesList = useGetEpisodesListSelector();
+  tableConfig.data = episodesList?.episodes ?? [];
   const setSelectedPodcastSelector= useSetSelectedPodcastSelector();
   const selectedPodcast = podcasts.filter(({id}) => id.attributes?.id === podcastId)[0];
+  const {artist, summary, name, image} = selectedPodcast;
+  const sanitizeSummary = summary.label.replace(/\n/g, '<br>');
+
   useEffect(() => {
     setSelectedPodcastSelector(selectedPodcast);
   }, []);
-  const {artist, summary, name, image} = selectedPodcast;
-  const sanitizeSummary = summary.label.replace(/\n/g, '<br>');
-  console.log(podcasts);
-  console.log(podcastId);
 
   return isFetching ? (
     <div style={{width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
@@ -41,14 +69,8 @@ export const PodcastDetailsPage = () => {
         />
       </div>
       <div className={styles['podcast-details__episodes']}>
-        <h2>{episodesList?.resultCount}</h2>
-        {episodesList?.episodes.map((episode) => (
-          <div>
-            <p>{episode.description}</p>
-            <p>{episode.trackId}</p>
-            <p>{episode.releaseDate}</p>
-          </div>
-        ))}
+        <BoxTitle title={`Episodes: ${episodesList?.resultCount}`}></BoxTitle>
+        <CdkTable<IEpisode> {...tableConfig}></CdkTable>
       </div>
     </div>
   );

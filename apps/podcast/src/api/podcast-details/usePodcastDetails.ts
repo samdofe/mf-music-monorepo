@@ -12,7 +12,9 @@ export const usePodcastDetails = (podcastId:string | number) => {
      const response = await podcastDetailQuery(podcastId);
      setEpisodesListSelector(response);
      return response;
-    }
+    },
+    staleTime: 24*60*60*1000,
+    gcTime: 25*60*60*1000
   });
 
   return {

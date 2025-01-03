@@ -1,5 +1,5 @@
 {
-  "name": "@inditex/cdk-header",
+  "name": "@inditex/cdk-table",
   "version": "0.0.1",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -10,6 +10,6 @@
     }
   },
   "peerDependencies": {
-    "@inditex/icons": "workspace:0.0.1"
+    "@inditex/utils": "workspace:0.0.1"
   }
 }

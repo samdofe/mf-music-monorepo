@@ -1,5 +1,5 @@
 {
-  "name": "utils",
+  "name": "@tools/utils",
   "targets": {
     "serve-multiple": {
       "executor": "nx:run-commands",
