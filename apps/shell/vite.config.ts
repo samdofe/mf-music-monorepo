@@ -10,6 +10,9 @@ import path from 'path';
 
 export default defineConfig({
   root: __dirname,
+  define: {
+    'process.env': process.env, // Access environment variables in code
+  },
   cacheDir: '../../node_modules/.vite/apps/shell',
   server: {
     port: 4200,
@@ -26,7 +29,9 @@ export default defineConfig({
     federation({
       name: 'shell',
       remotes: {
-        podcast: "http://localhost:4302/assets/remoteEntry.js"
+        podcast: process.env.NODE_ENV === 'production'
+          ? 'https://samdofe.github.io/inditex-challenge/podcast/remoteEntry.js'
+          : 'http://localhost:4302/assets/remoteEntry.js',
       },
       shared: [
         "react",
