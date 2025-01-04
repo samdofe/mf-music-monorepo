@@ -12,6 +12,7 @@
     "test:project": "nx run $PROJECT:test",
     "test:project:ui": "nx run $PROJECT:vitest-ui",
     "new:lib": "nx run @tools/utils:new-lib",
+    "new:cdk:lib": "nx run @tools/utils:new-cdk-lib",
     "graph": "nx graph"
   },
   "private": true,
