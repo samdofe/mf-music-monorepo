@@ -1,4 +1,4 @@
-import { TTimeFormats } from '@inditex/utils';
+import { TTimeFormats } from 'libs/utils/src';
 
 export type TColumnFormats =
   | TTimeFormats
