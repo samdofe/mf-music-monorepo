@@ -18,6 +18,7 @@
   "private": true,
   "workspaces": [
     "libs/*",
+    "libs/cdk-libs/*",
     "apps/*"
   ],
   "dependencies": {

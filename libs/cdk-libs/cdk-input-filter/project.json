@@ -1,7 +1,7 @@
 {
   "name": "cdk-input-filter",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/cdk-input-filter/src",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/cdk-libs/cdk-input-filter/src",
   "projectType": "library",
   "tags": [],
   "// targets": "to see all targets run: nx show project cdk-input-filter --web",
@@ -9,7 +9,7 @@
     "vitest-ui": {
       "executor": "nx:run-commands",
       "options" : {
-        "command": "vitest --config libs/cdk-input-filter/vite.config.ts --watch --ui"
+        "command": "vitest --config libs/cdk-libs/cdk-input-filter/vite.config.ts --watch --ui"
       }
     }
   }
