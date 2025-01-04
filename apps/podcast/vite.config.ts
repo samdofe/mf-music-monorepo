@@ -58,6 +58,7 @@ export default defineConfig({
       "@models": `${path.resolve(__dirname, "./src/models/index")}`,
       "@ui": `${path.resolve(__dirname, "./src/ui/index")}`,
       "@hooks": `${path.resolve(__dirname, "./src/hooks/index")}`,
+      "@mocks": `${path.resolve(__dirname, "../../mocks/data")}`,
       "@layouts": `${path.resolve(__dirname, "./src/layouts/index")}`,
       "@pages": `${path.resolve(__dirname, "./src/pages/index")}`,
       "@store": `${path.resolve(__dirname, "./src/store/index")}`
