@@ -16,6 +16,7 @@ export const PodcastsGridPage = (): ReactElement => {
     <div className={styles['podcasts-grid']}>
       <div className={styles['podcasts-grid__filter-container']}>
         <CdkInputFilter
+          data-testid="cdk-input-filter-testid"
           totalResults={filteredData.length}
           placeholder={'Filter podcasts-grid...'}
           onSearchChange={setSearchQuery}

@@ -66,6 +66,7 @@ export default defineConfig({
   test: {
     watch: false,
     globals: true,
+    setupFiles: `${path.resolve(__dirname, "./src/tests/setup.ts")}`,
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     coverage: {
@@ -73,7 +74,7 @@ export default defineConfig({
       exclude: [
         ...configDefaults.exclude,
         'src/models/*',
-        'src/test/**',
+        'src/tests/**',
         'src/index.tsx',
         '**/main.tsx',
         '**/index.ts',
