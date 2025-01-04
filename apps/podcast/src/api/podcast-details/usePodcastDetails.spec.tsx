@@ -10,6 +10,7 @@ describe('usePodcastDetails', () => {
     new QueryClient({
       defaultOptions: {
         queries: {
+          staleTime: 1000 * 60, // Keep data fresh for 1 minute
           retry: false,
         },
       },
