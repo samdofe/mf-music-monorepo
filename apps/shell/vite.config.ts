@@ -9,6 +9,7 @@ import path from 'path';
 //const deps = require("./package.json").dependencies;
 
 export default defineConfig({
+  base: '/inditex-challenge/shell/',
   root: __dirname,
   define: {
     'process.env': process.env, // Access environment variables in code
@@ -31,7 +32,7 @@ export default defineConfig({
       remotes: {
         podcast: process.env.NODE_ENV === 'production'
           ? 'https://samdofe.github.io/inditex-challenge/podcast/remoteEntry.js'
-          : 'http://localhost:4302/assets/remoteEntry.js',
+          : 'http://localhost:4301/assets/remoteEntry.js',
       },
       shared: [
         "react",

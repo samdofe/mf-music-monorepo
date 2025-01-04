@@ -8,17 +8,18 @@ import { configDefaults } from 'vitest/config';
 import path from 'path';
 
 export default defineConfig({
+  base: '/inditex-challenge/podcast/',
   root: __dirname,
   define: {
     'process.env': process.env, // Access environment variables in code
   },
   cacheDir: '../../node_modules/.vite/apps/podcast',
   server: {
-    port: 4202,
+    port: 4201,
     host: 'localhost'
   },
   preview: {
-    port: 4302,
+    port: 4301,
     host: 'localhost'
   },
   plugins: [
