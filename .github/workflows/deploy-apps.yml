@@ -39,14 +39,14 @@ jobs:
 
       # Step 6: Deploy Podcast App
       - name: Deploy Podcast App to Vercel
-        run: npx vercel --token=$VERCEL_TOKEN --prod --project-id=$VERCEL_PROJECT_ID_PODCAST dist/apps/podcast
+        run: npx vercel --token=$VERCEL_TOKEN --prod dist/apps/podcast
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_PROJECT_ID_PODCAST: ${{ secrets.VERCEL_PROJECT_ID_PODCAST }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_PODCAST }}
 
       # Step 7: Deploy Shell App
       - name: Deploy Shell App to Vercel
-        run: npx vercel --token=$VERCEL_TOKEN --prod --project-id=$VERCEL_PROJECT_ID_SHELL dist/apps/shell
+        run: npx vercel --token=$VERCEL_TOKEN --prod dist/apps/shell
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_PROJECT_ID_SHELL: ${{ secrets.VERCEL_PROJECT_ID_SHELL }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_SHELL }}
