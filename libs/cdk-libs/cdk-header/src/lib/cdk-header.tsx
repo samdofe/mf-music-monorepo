@@ -1,6 +1,6 @@
-import styles from './cdk-header.module.scss';
 import React, { ReactElement } from 'react';
 import { Pulse3Icon } from '@inditex/icons';
+import styles from './cdk-header.module.scss';
 
 export function CdkHeader({title, showIcon=false, titleClickHandler}: {title: string, showIcon?: boolean, titleClickHandler: ()=>void}): ReactElement {
   const onTitleClick = ()=>{

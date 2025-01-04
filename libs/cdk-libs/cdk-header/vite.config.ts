@@ -9,7 +9,7 @@ import { configDefaults } from 'vitest/config';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/libs/cdk-header',
+  cacheDir: '../../../node_modules/.vite/libs/cdk-header',
   plugins: [
     react(),
     nxViteTsPaths(),
@@ -23,7 +23,7 @@ export default defineConfig({
   // Configuration for building your library.
   // See: https://vitejs.dev/guide/build.html#library-mode
   build: {
-    outDir: '../../dist/libs/cdk-header',
+    outDir: '../../../dist/libs/cdk-libs/cdk-header',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
@@ -60,7 +60,7 @@ export default defineConfig({
         '**/index.ts',
         '**/*.d.ts',
       ],
-      reportsDirectory: '../../coverage/libs/cdk-header',
+      reportsDirectory: '../../../coverage/libs/cdk-libs/cdk-header',
       provider: 'v8'
     }
   }
