@@ -5,9 +5,6 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -40,18 +37,16 @@ jobs:
       - name: Build All Apps
         run: pnpm build:apps
 
-      # Step 6: Deploy Podcast App to GitHub Pages
-      - name: Deploy Podcast App
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GP_TOKEN }}
-          publish_dir: ./dist/apps/podcast
-          cname: false
-
-      # Step 7: Deploy Shell App to GitHub Pages
-      - name: Deploy Shell App
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GP_TOKEN }}
-          publish_dir: ./dist/apps/shell
-          cname: false
+#      # Step 6: Deploy Podcast App
+#      - name: Deploy Podcast App to Vercel
+#        run: npx vercel --token=$VERCEL_TOKEN --prod --project-id=$VERCEL_PROJECT_ID_PODCAST dist/apps/podcast
+#        env:
+#          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+#          VERCEL_PROJECT_ID_PODCAST: ${{ secrets.VERCEL_PROJECT_ID_PODCAST }}
+#
+#      # Step 7: Deploy Shell App
+#      - name: Deploy Shell App to Vercel
+#        run: npx vercel --token=$VERCEL_TOKEN --prod --project-id=$VERCEL_PROJECT_ID_SHELL dist/apps/shell
+#        env:
+#          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+#          VERCEL_PROJECT_ID_SHELL: ${{ secrets.VERCEL_PROJECT_ID_SHELL }}

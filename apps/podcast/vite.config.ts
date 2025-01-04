@@ -8,7 +8,7 @@ import { configDefaults } from 'vitest/config';
 import path from 'path';
 
 export default defineConfig({
-  base: '/inditex-challenge/podcast/',
+  base: process.env.VITE_PODCAST_DOMAIN || '/',
   root: __dirname,
   define: {
     'process.env': process.env, // Access environment variables in code
