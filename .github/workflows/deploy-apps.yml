@@ -1,0 +1,57 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Node.js and pnpm
+      - name: Setup Node.js and pnpm
+        uses: pnpm/action-setup@v4
+
+      # Cache node_modules
+      - name: Cache node_modules
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      # Step 3: Install dependencies
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Step 4: Install NX CLI globally
+      - name: Install NX CLI
+        run: pnpm add -g nx@latest
+
+      # Step 5: Build all apps using the existing script
+      - name: Build All Apps
+        run: pnpm build:apps
+
+      # Step 6: Deploy Podcast App to GitHub Pages
+      - name: Deploy Podcast App
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GP_TOKEN }}
+          publish_dir: ./dist/apps/podcast
+          cname: false
+
+      # Step 7: Deploy Shell App to GitHub Pages
+      - name: Deploy Shell App
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GP_TOKEN }}
+          publish_dir: ./dist/apps/shell
+          cname: false
