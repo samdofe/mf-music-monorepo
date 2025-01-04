@@ -5,7 +5,7 @@ import { useSetPodcastsSelector } from '@store';
 
 export const usePodcastsLoad = () => {
   const setPodcastsSelector = useSetPodcastsSelector();
-  const {data, error, isFetching} = useQuery<IPodcast[], Error, IPodcast[]>({
+  const {data, error, isFetching, isSuccess} = useQuery<IPodcast[], Error, IPodcast[]>({
     queryKey: ['podcasts-grid-load'],
     queryFn: async () => {
       const response = await podcastsLoadQuery();
@@ -19,6 +19,7 @@ export const usePodcastsLoad = () => {
   return {
     data,
     error,
-    isFetching
+    isFetching,
+    isSuccess
   };
 };
