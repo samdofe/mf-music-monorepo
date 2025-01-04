@@ -24,7 +24,9 @@ export const EpisodePlayerPage = ()=>{
         id="audioPlayer"
         ref={audioRef}
         className={styles['episode-player__audio-player']}
-        controls={controlsEnabled}>
+        controls={controlsEnabled}
+        data-testid="audio-player-testid"
+      >
           <source
             src={episodeUrl}
             type="audio/mpeg" />
