@@ -161,37 +161,37 @@ importers:
     dependencies:
       '@inditex/cdk-card':
         specifier: workspace:0.0.1
-        version: link:../cdk-card
+        version: link:../cdk-libs/cdk-card
       '@inditex/cdk-header':
         specifier: workspace:0.0.1
-        version: link:../cdk-header
+        version: link:../cdk-libs/cdk-header
       '@inditex/cdk-input-filter':
         specifier: workspace:0.0.1
-        version: link:../cdk-input-filter
+        version: link:../cdk-libs/cdk-input-filter
       '@inditex/cdk-table':
         specifier: workspace:0.0.1
-        version: link:../cdk-table
+        version: link:../cdk-libs/cdk-table
       '@inditex/cdk-thumbnail':
         specifier: workspace:0.0.1
-        version: link:../cdk-thumbnail
+        version: link:../cdk-libs/cdk-thumbnail
 
-  libs/cdk-card: {}
+  libs/cdk-libs/cdk-card: {}
 
-  libs/cdk-header:
+  libs/cdk-libs/cdk-header:
     dependencies:
       '@inditex/icons':
         specifier: workspace:0.0.1
-        version: link:../icons
+        version: link:../../icons
 
-  libs/cdk-input-filter: {}
+  libs/cdk-libs/cdk-input-filter: {}
 
-  libs/cdk-table:
+  libs/cdk-libs/cdk-table:
     dependencies:
       '@inditex/utils':
         specifier: workspace:0.0.1
-        version: link:../utils
+        version: link:../../utils
 
-  libs/cdk-thumbnail: {}
+  libs/cdk-libs/cdk-thumbnail: {}
 
   libs/icons: {}
 
