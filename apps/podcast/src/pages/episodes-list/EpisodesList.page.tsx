@@ -5,7 +5,7 @@ import { DATE_FORMATS, TIME_FORMATS } from '@inditex/utils';
 import { useGetEpisodesListSelector } from '@store';
 import { useNavigate } from 'react-router-dom';
 
-const tableConfig: ICdkTableConfig<IEpisode> = {
+export const tableConfig: ICdkTableConfig<IEpisode> = {
   headersTemplateStyle: '1fr 80px 100px',
   headers: [
     {
