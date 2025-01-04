@@ -1,7 +1,5 @@
 import React, { lazy } from 'react';
 import { ShellLayoutComponent } from '@layouts';
-import { Navigate } from 'react-router-dom';
-import { RouteWrapper } from '@inditex/router';
 
 const PodcastApp = lazy(() =>
   import('podcast/PodcastApp').catch(() => {
