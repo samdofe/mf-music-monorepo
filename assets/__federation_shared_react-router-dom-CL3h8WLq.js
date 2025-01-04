@@ -1,4 +1,4 @@
-import { importShared } from './__federation_fn_import-DPXHpT1Z.js';
+import { i as importShared } from './_virtual___federation_fn_import-79qq62bm.js';
 
 /**
  * @remix-run/router v1.6.2
@@ -5466,4 +5466,4 @@ function usePrompt(_ref8) {
 }
 
 export { AbortedDeferredError, Await, BrowserRouter, Form, HashRouter, Link, MemoryRouter, NavLink, Navigate, Action as NavigationType, Outlet, Route, Router, RouterProvider, Routes, ScrollRestoration, DataRouterContext as UNSAFE_DataRouterContext, DataRouterStateContext as UNSAFE_DataRouterStateContext, LocationContext as UNSAFE_LocationContext, NavigationContext as UNSAFE_NavigationContext, RouteContext as UNSAFE_RouteContext, useRouteId as UNSAFE_useRouteId, useScrollRestoration as UNSAFE_useScrollRestoration, createBrowserRouter, createHashRouter, createMemoryRouter, createPath, createRoutesFromChildren, createRoutesFromChildren as createRoutesFromElements, createSearchParams, defer, generatePath, isRouteErrorResponse, json, matchPath, matchRoutes, parsePath, redirect, renderMatches, resolvePath, HistoryRouter as unstable_HistoryRouter, useBlocker as unstable_useBlocker, usePrompt as unstable_usePrompt, useActionData, useAsyncError, useAsyncValue, useBeforeUnload, useFetcher, useFetchers, useFormAction, useHref, useInRouterContext, useLinkClickHandler, useLoaderData, useLocation, useMatch, useMatches, useNavigate, useNavigation, useNavigationType, useOutlet, useOutletContext, useParams, useResolvedPath, useRevalidator, useRouteError, useRouteLoaderData, useRoutes, useSearchParams, useSubmit };
-//# sourceMappingURL=__federation_shared_react-router-dom-BL7MmVnb.js.map
+//# sourceMappingURL=__federation_shared_react-router-dom-CL3h8WLq.js.map

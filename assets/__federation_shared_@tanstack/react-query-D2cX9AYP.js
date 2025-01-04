@@ -1,4 +1,4 @@
-import { importShared } from '../__federation_fn_import-DPXHpT1Z.js';
+import { i as importShared } from '../_virtual___federation_fn_import-79qq62bm.js';
 import { j as jsxRuntimeExports } from '../jsx-runtime-BgsmXpcd.js';
 
 // src/subscribable.ts
@@ -3161,4 +3161,4 @@ function useInfiniteQuery(options, queryClient) {
 }
 
 export { CancelledError, HydrationBoundary, InfiniteQueryObserver, IsRestoringProvider, Mutation, MutationCache, MutationObserver, QueriesObserver, Query, QueryCache, QueryClient, QueryClientContext, QueryClientProvider, QueryErrorResetBoundary, QueryObserver, dataTagErrorSymbol, dataTagSymbol, defaultShouldDehydrateMutation, defaultShouldDehydrateQuery, dehydrate, focusManager, hashKey, hydrate, infiniteQueryOptions, isCancelledError, isServer, keepPreviousData, matchMutation, matchQuery, notifyManager, onlineManager, queryOptions, replaceEqualDeep, skipToken, unsetMarker, useInfiniteQuery, useIsFetching, useIsMutating, useIsRestoring, useMutation, useMutationState, usePrefetchInfiniteQuery, usePrefetchQuery, useQueries, useQuery, useQueryClient, useQueryErrorResetBoundary, useSuspenseInfiniteQuery, useSuspenseQueries, useSuspenseQuery };
-//# sourceMappingURL=react-query-Cytlzp0G.js.map
+//# sourceMappingURL=react-query-D2cX9AYP.js.map

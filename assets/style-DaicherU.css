@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}:root {
+  --font-family: Roboto;
+  --primary-color: rgb(59, 129, 184);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+._header_dmb9f_7 {
+  font-family: var(font-family), Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 15px;
+  box-shadow: 0 4px 2px -2px var(--shadow-color);
+}
+._header__title_dmb9f_15 {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+._header__title_dmb9f_15:hover {
+  cursor: pointer;
+}
+._header__icon_dmb9f_23 > svg {
+  fill: var(--primary-color);
+}._shell_1r8p7_1 {
+  display: flex;
+  justify-content: center;
+}
+._shell__layout_1r8p7_5 {
+  width: 1024px;
+}

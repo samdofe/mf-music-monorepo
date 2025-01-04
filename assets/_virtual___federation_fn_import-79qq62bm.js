@@ -357,7 +357,7 @@ function satisfy(version, range) {
 const currentImports = {};
 
 // eslint-disable-next-line no-undef
-const moduleMap = {'react':{get:()=>()=>__federation_import(new URL('__federation_shared_react-DYlhdcjt.js', import.meta.url).href),import:true},'react-dom':{get:()=>()=>__federation_import(new URL('__federation_shared_react-dom-BOY597UY.js', import.meta.url).href),import:true},'react-router-dom':{get:()=>()=>__federation_import(new URL('__federation_shared_react-router-dom-BL7MmVnb.js', import.meta.url).href),import:true},'@tanstack/react-query':{get:()=>()=>__federation_import(new URL('__federation_shared_@tanstack/react-query-Cytlzp0G.js', import.meta.url).href),import:true}};
+const moduleMap = {'react':{get:()=>()=>__federation_import(new URL('__federation_shared_react-DYlhdcjt.js', import.meta.url).href),import:true},'react-dom':{get:()=>()=>__federation_import(new URL('__federation_shared_react-dom-BOY597UY.js', import.meta.url).href),import:true},'react-router-dom':{get:()=>()=>__federation_import(new URL('__federation_shared_react-router-dom-CL3h8WLq.js', import.meta.url).href),import:true},'@tanstack/react-query':{get:()=>()=>__federation_import(new URL('__federation_shared_@tanstack/react-query-D2cX9AYP.js', import.meta.url).href),import:true}};
 const moduleCache = Object.create(null);
 async function importShared(name, shareScope = 'default') {
   return moduleCache[name]
@@ -418,5 +418,5 @@ function flattenModule(module, name) {
   return module
 }
 
-export { importShared, getSharedFromLocal as importSharedLocal, getSharedFromRuntime as importSharedRuntime };
-//# sourceMappingURL=__federation_fn_import-DPXHpT1Z.js.map
+export { importShared as i };
+//# sourceMappingURL=_virtual___federation_fn_import-79qq62bm.js.map
