@@ -2,14 +2,13 @@ import React, {useEffect} from 'react';
 import { Outlet, useNavigate, useParams } from 'react-router-dom';
 import DOMPurify from 'dompurify';
 import { CdkCard } from '@inditex/cdk';
-import {ThreeDotsScaleIcon} from '@inditex/icons';
 import {usePodcastDetails} from '@api';
 import {
   useGetPodcastsSelector,
   useSetSelectedPodcastSelector
 } from '@store';
-import styles from './PodcastDetails.page.module.scss';
 import { Loader } from '@ui';
+import styles from './PodcastDetails.page.module.scss';
 
 export const PodcastDetailsPage = () => {
   const {podcastId} = useParams();

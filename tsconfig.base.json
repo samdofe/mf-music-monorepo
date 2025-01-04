@@ -17,7 +17,7 @@
     "paths": {
       "@inditex/api": ["libs/api/src/index.ts"],
       "@inditex/cdk": ["libs/cdk/src/index.ts"],
-      "@inditex/cdk-card": ["libs/cdk-card/src/index.ts"],
+      "@inditex/cdk-card": ["libs/cdk-libs/cdk-card/src/index.ts"],
       "@inditex/cdk-header": ["libs/cdk-header/src/index.ts"],
       "@inditex/cdk-input-filter": ["libs/cdk-input-filter/src/index.ts"],
       "@inditex/cdk-table": ["libs/cdk-table/src/index.ts"],
