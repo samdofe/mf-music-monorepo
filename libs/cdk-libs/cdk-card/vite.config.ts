@@ -9,7 +9,7 @@ import { configDefaults } from 'vitest/config';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/libs/cdk-card',
+  cacheDir: '../../../node_modules/.vite/libs/cdk-card',
   plugins: [
     react(),
     nxViteTsPaths(),
@@ -23,7 +23,7 @@ export default defineConfig({
   // Configuration for building your library.
   // See: https://vitejs.dev/guide/build.html#library-mode
   build: {
-    outDir: '../../dist/libs/cdk-card',
+    outDir: '../../../dist/libs/cdk-libs/cdk-card',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
@@ -60,7 +60,7 @@ export default defineConfig({
         '**/index.ts',
         '**/*.d.ts',
       ],
-      reportsDirectory: '../../coverage/libs/cdk-card',
+      reportsDirectory: '../../../coverage/libs/cdk-libs/cdk-card',
       provider: 'v8'
     }
   }
