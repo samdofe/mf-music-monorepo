@@ -19,7 +19,7 @@
       "@inditex/cdk": ["../../libs/cdk/src/index.ts"],
       "@inditex/cdk-card": ["../../libs/cdk-libs/cdk-card/src/index.ts"],
       "@inditex/cdk-header": ["../../libs/cdk-header/src/index.ts"],
-      "@inditex/cdk-input-filter": ["../../libs/cdk-input-filter/src/index.ts"],
+      "@inditex/cdk-input-filter": ["../../libs/cdk-libs/cdk-input-filter/src/index.ts"],
       "@inditex/cdk-table": ["../../libs/cdk-table/src/index.ts"],
       "@inditex/cdk-thumbnail": ["../../libs/cdk-thumbnail/src/index.ts"],
       "@inditex/icons": ["../../libs/icons/src/index.ts"],
