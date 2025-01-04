@@ -30,7 +30,7 @@ export default defineConfig({
       name: 'podcast',
       filename: 'remoteEntry.js',
       exposes: {
-        './PodcastApp': './src/app/App.tsx'
+        './PodcastApp': './src/app/app.tsx'
       },
       shared: [
         "react",

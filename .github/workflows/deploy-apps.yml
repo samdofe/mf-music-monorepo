@@ -38,7 +38,7 @@ jobs:
 
       # Step 5: Build all apps using the existing script
       - name: Build All Apps
-        run: pnpm build:apps --debug
+        run: pnpm build:apps
 
       # Step 6: Deploy Podcast App to GitHub Pages
       - name: Deploy Podcast App
