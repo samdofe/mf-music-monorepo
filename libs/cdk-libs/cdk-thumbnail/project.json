@@ -1,7 +1,7 @@
 {
   "name": "cdk-thumbnail",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/cdk-thumbnail/src",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/cdk-libs/cdk-thumbnail/src",
   "projectType": "library",
   "tags": [],
   "// targets": "to see all targets run: nx show project cdk-thumbnail --web",
@@ -9,7 +9,7 @@
     "vitest-ui": {
       "executor": "nx:run-commands",
       "options" : {
-        "command": "vitest --config libs/cdk-thumbnail/vite.config.ts --watch --ui"
+        "command": "vitest --config libs/cdk-libs/cdk-thumbnail/vite.config.ts --watch --ui"
       }
     }
   }

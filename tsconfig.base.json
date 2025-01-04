@@ -21,7 +21,7 @@
       "@inditex/cdk-header": ["libs/cdk-header/src/index.ts"],
       "@inditex/cdk-input-filter": ["libs/cdk-libs/cdk-input-filter/src/index.ts"],
       "@inditex/cdk-table": ["libs/cdk-libs/cdk-table/src/index.ts"],
-      "@inditex/cdk-thumbnail": ["libs/cdk-thumbnail/src/index.ts"],
+      "@inditex/cdk-thumbnail": ["libs/cdk-libs/cdk-thumbnail/src/index.ts"],
       "@inditex/icons": ["libs/icons/src/index.ts"],
       "@inditex/router": ["libs/router/src/index.ts"],
       "@inditex/utils": ["libs/utils/src/index.ts"]
