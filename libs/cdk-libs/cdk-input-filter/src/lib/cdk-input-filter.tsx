@@ -7,7 +7,7 @@ export function CdkInputFilter({totalResults, placeholder, onSearchChange}: CdkI
     onSearchChange(evt.target.value);
   };
   return (
-    <div className={styles['input-filter']}>
+    <div className={styles['input-filter']} data-testid="cdk-input-filter-testid">
       <span className={styles['input-filter__pill']}>{totalResults}</span>
       <input
         className={styles['input-filter__search-box']}
