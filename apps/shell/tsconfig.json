@@ -11,6 +11,7 @@
       "@layouts": ["src/app/layouts/index.ts"],
       "@inditex/api": ["../../libs/api/src/index.ts"],
       "@inditex/cdk": ["../../libs/cdk/src/index.ts"],
+      "@inditex/cdk-header": ["../../libs/cdk-libs/cdk-header/src/index.ts"],
       "@inditex/icons": ["../../libs/icons/src/index.ts"],
       "@inditex/router": ["../../libs/router/src/index.ts"]
     }
