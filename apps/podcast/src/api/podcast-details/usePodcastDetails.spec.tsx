@@ -29,8 +29,15 @@ describe('usePodcastDetails', () => {
     const { result } = renderHook(() => usePodcastDetails(123), { wrapper });
 
     // Wait until data is populated
-    await waitFor(() => result.current.data !== undefined && result.current.data.episodes.length > 0);
+    await waitFor(() => {
+      const data = result.current.data;
 
-    expect(result.current.data?.episodes[0]).toEqual(podcastDetailsQueryResponse.results[1]);
+      if(data){
+        expect(data.episodes[0]).toEqual(podcastDetailsQueryResponse.results[1]);
+      }
+
+      return expect(data).toBeDefined();
+    });
+
   });
 });
