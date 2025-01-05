@@ -12,3 +12,9 @@
     row-gap: 20px;
   }
 }
+
+@media ( width < 1024px){
+  .podcast-details{
+    flex-direction: column;
+  }
+}

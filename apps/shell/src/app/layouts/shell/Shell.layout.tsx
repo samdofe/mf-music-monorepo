@@ -1,6 +1,5 @@
 import { Outlet, useNavigate, useNavigation } from 'react-router-dom';
 import { CdkHeader } from '@inditex/cdk';
-//import { ThreeDotsScaleIcon } from '@inditex/icons';
 import styles from './shell.layout.module.scss';
 
 export const ShellLayoutComponent = () => {
