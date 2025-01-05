@@ -27,11 +27,13 @@ describe('usePodcastsLoad', () => {
 
   it('should return podcast details data', async () => {
     const { result } = renderHook(() => usePodcastsLoad(), { wrapper });
-
     // Wait until data is populated
-    await waitFor(() => result.current.data !== undefined && result.current.data.length > 0);
-    const entry = result.current.data;
-
-    expect(entry).toBeDefined();
+    await waitFor(() => {
+      const entry = result.current.data;
+      if(entry){
+        expect(entry[0]).toEqual(podcastsLoadQueryResponse.feed.entry[0])
+      }
+      return expect(entry).toBeDefined();
+    });
   });
 });
