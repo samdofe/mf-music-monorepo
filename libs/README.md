@@ -60,7 +60,17 @@ Desde el directorio raíz del proyecto:
   pnpm test:project:ui --PROJECT=cdk-card
   ```
 
-![Nx console](../readme-helpers/assets/images/vitest-ui-dashboard.gif)
+  #### **Con la consola de Nx****:
+
+  ![Nx console](../readme-helpers/assets/images/vitest-ui-nx-console.gif)
+
+  #### **Con el terminal**:
+
+  ![Nx console](../readme-helpers/assets/images/vitest-ui-terminal.gif)
+
+  #### **Vitest UI**
+
+  ![Nx console](../readme-helpers/assets/images/vitest-ui-dashboard.gif)
 
 ### Creación de Librerías
 - **Nueva librería estándar**:
