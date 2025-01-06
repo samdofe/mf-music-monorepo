@@ -7,13 +7,13 @@ import {
   useGetPodcastsSelector,
   useSetSelectedPodcastSelector
 } from '@store';
-import { Loader } from '@ui';
+import { Loader, NoResults } from '@ui';
 import styles from './PodcastDetails.page.module.scss';
 
 export const PodcastDetailsPage = () => {
   const {podcastId} = useParams();
   const navigate = useNavigate();
-  const {isFetching} = usePodcastDetails(podcastId ?? '');
+  const {isFetching, data} = usePodcastDetails(podcastId ?? '');
   const podcasts = useGetPodcastsSelector();
   const setSelectedPodcastSelector= useSetSelectedPodcastSelector();
   const selectedPodcast = podcasts.filter(({id}) => id.attributes?.id === podcastId)[0];
@@ -26,7 +26,7 @@ export const PodcastDetailsPage = () => {
 
   return isFetching ? (
     <Loader />
-  ) : (
+  ) : data ? (
     <div className={styles['podcast-details']}>
       <div className={styles['podcast-details__card']}>
         <CdkCard
@@ -41,6 +41,8 @@ export const PodcastDetailsPage = () => {
         <Outlet />
       </div>
     </div>
+  ) : (
+    <NoResults />
   );
 };
 

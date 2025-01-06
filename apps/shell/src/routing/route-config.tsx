@@ -1,5 +1,6 @@
 import React, { lazy } from 'react';
 import { ShellLayoutComponent } from '../layouts';
+import { RouteObject } from 'react-router-dom';
 
 const PodcastApp = lazy(() =>
   import('podcast/PodcastApp').catch(() => {
@@ -7,7 +8,7 @@ const PodcastApp = lazy(() =>
   })
 );
 
-export const routes: any[] = [
+export const routes: RouteObject[] = [
   {
     path: '/',
     element: <ShellLayoutComponent />,

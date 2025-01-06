@@ -6,7 +6,7 @@ export const useAudioPlayerEventListener = (audioRef: RefObject<HTMLAudioElement
   useEffect(() => {
     const audioElement = audioRef.current;
 
-    if (!audioElement) return;
+    if (!audioElement) {return;}
 
     const handleCanPlayThrough = () => {
       setControlsEnabled(true);

@@ -12,7 +12,8 @@ export default defineConfig({
   base: process.env.VITE_SHELL_DOMAIN ?? '/',
   root: __dirname,
   define: {
-    'process.env': process.env, // Access environment variables in code
+    // Access environment variables in code
+    'process.env': process.env,
   },
   cacheDir: '../../node_modules/.vite/apps/shell',
   server: {

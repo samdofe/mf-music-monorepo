@@ -33,9 +33,7 @@ export const EpisodePlayerPage = ()=>{
           Your browser does not support the audio element.
       </audio>
       {
-        !controlsEnabled ? (
-          <Loader />
-        ) : null
+        !controlsEnabled && <Loader />
       }
     </div>
   )

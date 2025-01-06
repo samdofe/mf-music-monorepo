@@ -11,7 +11,8 @@ export default defineConfig({
   base: process.env.VITE_PODCAST_DOMAIN || '/',
   root: __dirname,
   define: {
-    'process.env': process.env, // Access environment variables in code
+    // Access environment variables in code
+    'process.env': process.env,
   },
   cacheDir: '../../node_modules/.vite/apps/podcast',
   server: {
@@ -40,16 +41,18 @@ export default defineConfig({
       ],
     }),
   ],
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [ nxViteTsPaths() ],
-  // },
+  /*
+   * Uncomment this if you are using workers.
+   * worker: {
+   *  plugins: [ nxViteTsPaths() ],
+   * },
+   */
   build: {
     modulePreload: false,
     outDir: "../../dist/apps/podcast",
     target: "esnext",
     minify: true,
-    sourcemap: false, // Generate source maps for debugging
+    sourcemap: false,
     cssCodeSplit: false,
   },
   resolve: {

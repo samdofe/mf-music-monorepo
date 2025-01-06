@@ -40,7 +40,7 @@ export const useSetSelectedPodcastSelector = ()=>{
 
   return (selectedPodcast: IPodcast)=> setPodcastStore({
     ...podcastStore,
-    selectedPodcast: selectedPodcast
+    selectedPodcast
   });
 
 }
@@ -50,7 +50,7 @@ export const useSetEpisodesListSelector = ()=>{
   return (episodesList: IEpisodesList)=>
   setPodcastStore({
     ...podcastStore,
-    episodesList: episodesList
+    episodesList
   });
 }
 
