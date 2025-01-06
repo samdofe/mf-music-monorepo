@@ -70,6 +70,12 @@ Los scripts se ejecutan desde el directorio raíz:
   ```bash
   pnpm test:project --PROJECT=podcast
   ```
+- **Ejecutar pruebas con interfaz gráfica de Vitest**: (reemplaza `$PROJECT`):
+  ```bash
+  pnpm test:project:ui --PROJECT=podcast
+  ```
+  
+![Nx console](readme-helpers/assets/images/vitest-ui-dashboard.gif)
 
 ### Nx Utilidades
 - **Visualizar el grafo de dependencias**:

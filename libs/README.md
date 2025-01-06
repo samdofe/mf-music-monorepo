@@ -51,10 +51,16 @@ Desde el directorio raíz del proyecto:
   ```bash
   pnpm test:all
   ```
-- **Ejecutar pruebas de una librería específica** (reemplaza `$LIBRARY`):
+- **Ejecutar pruebas de una librería específica** (reemplaza `$PROJECT`):
   ```bash
-  pnpm test:project --PROJECT=$LIBRARY
+  pnpm test:project --PROJECT=cdk-card
   ```
+- **Ejecutar pruebas con interfaz gráfica de Vitest**: (reemplaza `$PROJECT`):
+  ```bash
+  pnpm test:project:ui --PROJECT=cdk-card
+  ```
+
+![Nx console](../readme-helpers/assets/images/vitest-ui-dashboard.gif)
 
 ### Creación de Librerías
 - **Nueva librería estándar**:
