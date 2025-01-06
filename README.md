@@ -128,7 +128,16 @@ The project is automatically deployed to **Vercel** upon merging into the `main`
   - In development mode (2), the applications work independently of each other
 ####
 
-![Nx console](readme-helpers/assets/images/shell-demo.gif)
+  <![Nx console](readme-helpers/assets/images/shell-demo.gif)
+
+___
+
+## Git Repository
+- [**GITHUB** - inditex-challenge](https://github.com/samdofe/inditex-challenge): 
+  - The solution is in a private repository. Please contact [the author](https://github.com/samdofe) to request access.
+  - You can also have a looked at the PR's tab to watch the evolution of the solution
+####
+  ![Nx console](readme-helpers/assets/images/github.gif)
 
 ___
 
