@@ -76,8 +76,18 @@ Desde el directorio raíz del proyecto:
   ```bash
   pnpm test:project:ui --PROJECT=podcast
   ```
+
+  #### **Con la consola de Nx****:
+
+  ![Nx console](../../readme-helpers/assets/images/vitest-ui-nx-console.gif)
+
+  #### **Con el terminal**:
+
+  ![Nx console](../../readme-helpers/assets/images/vitest-ui-terminal.gif)
+
+  #### **Vitest UI**
   
-![Nx console](../../readme-helpers/assets/images/vitest-ui-dashboard.gif)
+  ![Nx console](../../readme-helpers/assets/images/vitest-ui-dashboard.gif)
 
 
 ---
