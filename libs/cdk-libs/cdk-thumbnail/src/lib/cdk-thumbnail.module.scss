@@ -3,12 +3,13 @@
   --primary-color: rgb(59 129 184);
   --secondary-color: rgba(133, 135, 136, 1);
   --shadow-color: rgba(0, 0, 0, 0.2);
+  --font-size: 14px;
 }
 
 .cdk-thumbnail {
   cursor: pointer;
   width: 100%;
-  max-width: 186px;
+  max-width: 217px;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -21,18 +22,25 @@
   gap: 7px;
   margin-top: 50px;
   padding: 67px 5px 12px 5px;
+  font-size: var(--font-size);
   &__img{
-    width: 100px;
+    width: 130px;
     position: absolute;
-    top: -40px;
+    top: -66px;
     border-radius: 50%;
   }
   &__title{
-    font-size: 12px;
     font-weight: bold;
+    font-size: 13px;
   }
   &__sub-title{
-    font-size: 12px;
     color: var(--secondary-color);
+    font-size: 13px;
+  }
+}
+
+@media (width < 500px) {
+  .cdk-thumbnail{
+    max-width: 100%;
   }
 }

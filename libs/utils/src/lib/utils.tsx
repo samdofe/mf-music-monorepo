@@ -50,5 +50,8 @@ export const cdkUtilsDateFormatter = (date: string, format: TDateFormats ): stri
 }
 
 export const cdkUtilsFieldFormatter = (value: string | number, format: TDateFormats | TTimeFormats)=> {
+  if(!value){
+    return 'N|D';
+  }
   return format.includes('time:') ? cdkUtilsTimeFormatter(value as number, format) : cdkUtilsDateFormatter(value as string, format);
 }

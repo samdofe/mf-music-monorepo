@@ -3,3 +3,11 @@
     padding: 0 15%;
   }
 }
+
+@media (width < 500px){
+  .shell{
+    &__layout{
+      padding: 0 5%;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 :root{
   --font-family : Roboto;
+  --header-font-size: 25px;
   --primary-color: rgb(59, 129, 184);
   --shadow-color: rgba(0, 0, 0, 0.2);
 }
@@ -9,10 +10,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px 15px;
+  padding: 15px 15px;
   box-shadow: 0 4px 2px -2px var(--shadow-color);
   &__title{
-    font-size: 18px;
+    font-size: var(--header-font-size);
     font-weight: bold;
     color: var(--primary-color);
     &:hover{
