@@ -48,8 +48,8 @@ export default defineConfig({
     modulePreload: false,
     outDir: "../../dist/apps/podcast",
     target: "esnext",
-    minify: false,
-    sourcemap: true, // Generate source maps for debugging
+    minify: true,
+    sourcemap: false, // Generate source maps for debugging
     cssCodeSplit: false,
   },
   resolve: {
