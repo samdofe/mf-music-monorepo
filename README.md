@@ -135,7 +135,7 @@ ___
 ## Git Repository
 - [**GITHUB** - inditex-challenge](https://github.com/samdofe/inditex-challenge): 
   - The solution is in a private repository. Please contact [the author](https://github.com/samdofe) to request access.
-  - You can also have a looked at the PR's tab to watch the evolution of the solution
+  - You can also have a looked at the PR's tab to see the evolution of the solution
 ####
   ![Nx console](readme-helpers/assets/images/github.gif)
 
