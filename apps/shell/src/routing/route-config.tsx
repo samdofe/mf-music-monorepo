@@ -1,5 +1,5 @@
 import React, { lazy } from 'react';
-import { ShellLayoutComponent } from '@layouts';
+import { ShellLayoutComponent } from '../layouts';
 
 const PodcastApp = lazy(() =>
   import('podcast/PodcastApp').catch(() => {

@@ -2,7 +2,7 @@ import {render} from '@testing-library/react';
 
 import CdkHeader from './cdk-header';
 
-const renderElement = (title:string, show=false)=> render(<CdkHeader title={title} showIcon={show} />)
+const renderElement = (title:string, show=false)=> render(<CdkHeader title={title} showIcon={show} titleClickHandler={()=>{}}/>)
 
 describe('CdkHeader', () => {
   it('should render successfully', () => {
