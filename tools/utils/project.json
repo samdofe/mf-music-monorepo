@@ -27,7 +27,7 @@
       "options": {
         "commands": [
           { "command": "nx reset" },
-          { "command": "nx run-many -t build -p cdk-header cdk" }
+          { "command": "nx run-many -t build -p api icons router utils cdk" }
         ],
         "parallel": false
       }
@@ -38,8 +38,15 @@
         "commands": [
           { "command": "nx run podcast:test" },
           { "command": "nx run shell:test" },
+          { "command": "nx run api:test" },
+          { "command": "nx run cdk-card:test" },
           { "command": "nx run cdk-header:test" },
-          { "command": "nx run icons:test" }
+          { "command": "nx run cdk-input-filter:test" },
+          { "command": "nx run cdk-table:test" },
+          { "command": "nx run cdk-thumbnail:test" },
+          { "command": "nx run icons:test" },
+          { "command": "nx run router:test" },
+          { "command": "nx run utils:test" }
         ],
         "parallel": false
       }

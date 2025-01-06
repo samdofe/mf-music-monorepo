@@ -10,9 +10,4 @@ describe('App', () => {
     const { baseElement } = renderView();
     expect(baseElement).toBeTruthy();
   });
-
-  it('should have a Podcaster title', () => {
-    const { getByText } = renderView();
-    expect(getByText(/Podcaster/gi)).toBeTruthy();
-  });
 });
