@@ -11,7 +11,7 @@ La carpeta **tools/** contiene scripts personalizados desarrollados con **Nx** p
 - **Descripción**: Arranca múltiples aplicaciones (Shell y Podcast) en modo preview simultáneamente.
 - **Comando**:
   ```bash
-  pnpm start:all:dev
+  pnpm start:all:preview
   ```
 
 ### 2. **build-apps**
