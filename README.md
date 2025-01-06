@@ -1,138 +1,145 @@
+
 # Inditex Challenge
 
-## Descripción General
-Este repositorio contiene la solución al challenge técnico de Inditex para el puesto de Tech Lead Frontend. La solución implementa una arquitectura basada en **micro-frontends** utilizando un monorepo integrado gestionado con **Nx**, además de tecnologías modernas como **React**, **Vite**, **Vitest**, y **Module Federation**.
+## Overview
+This repository contains the solution to the Inditex technical challenge for the Tech Lead Frontend position. The solution implements a **micro-frontend** architecture using an integrated monorepo managed with **Nx**, along with modern technologies such as **React**, **Vite**, **Vitest**, and **Module Federation**.
 
-## Características principales
-- **Micro-frontends**: La solución está separada en aplicaciones individuales (shell y podcast) con una arquitectura modular.
-- **Design System**: Librerías reutilizables para componentes, utilidades, enrutamiento, y APIs.
-- **DevOps**: Despliegue continuo a **Vercel** mediante PRs y merges a `main`.
-- **Testing**: Integración con **Vitest** y Nx para pruebas unitarias y visualización de cobertura.
+## Key Features
+- **Micro-frontends**: The solution is divided into individual applications (shell and podcast) with a modular architecture.
+- **Design System**: Reusable libraries for components, utilities, routing, and APIs.
+- **DevOps**: Continuous deployment to **Vercel** via PRs and merges to `main`.
+- **Testing**: Integration with **Vitest** and Nx for unit testing and coverage visualization.
 
 ---
 
-## Requisitos previos
-1. Node.js 22.12.0 (gestionado con `.nvmrc`).
-2. PNPM como gestor de paquetes.
+## Prerequisites
+1. Node.js 22.12.0 (managed with `.nvmrc`).
+2. PNPM as the package manager.
 
-Para instalar las dependencias:
+To install dependencies:
 ```bash
 pnpm install
 ```
 ___
 
-## Estructura del Monorepo
-- **`apps/`**: Contiene las aplicaciones principales.
-  - **`shell/`**: Aplicación host.
-  - **`podcast/`**: Aplicación remota con la funcionalidad principal.
-- **`libs/`**: Librerías reutilizables.
+## Monorepo Structure
+- **`apps/`**: Contains the main applications.
+  - **`shell/`**: Host application.
+  - **`podcast/`**: Remote application with the main functionality.
+- **`libs/`**: Reusable libraries.
   - **`cdk/`**: Component Dev Kit.
   - **`api/`**, **`utils/`**, **`icons/`**, **`router/`**.
-- **`tools/`**: Scripts personalizados de Nx.
-- Archivos de configuración clave: `nx.json`, `pnpm-workspace.yaml`, `tsconfig.base.json`.
+- **`tools/`**: Custom Nx scripts.
+- Key configuration files: `nx.json`, `pnpm-workspace.yaml`, `tsconfig.base.json`.
 
 ---
 
-## Front end System Design
+## Frontend System Design
 
-![Nx console](readme-helpers/assets/images/front-system-design.png) 
+![Nx console](readme-helpers/assets/images/front-system-design.png)
 
 ---
 
-## Scripts Disponibles
-Los scripts se ejecutan desde el directorio raíz:
+## Available Scripts
+The scripts are executed from the root directory:
 
-### Desarrollo
-- **Arrancar todas las aplicaciones**:
+### Development
+- **Start all applications**:
   ```bash
   pnpm start:all:preview
   ```
-- **Arrancar una aplicación específica** (reemplaza `$PROJECT`):
+- **Start a specific application** (replace `$PROJECT`):
   ```bash
   pnpm start:project:dev --PROJECT=shell
   ```
 
-### Construcción
-- **Construir todas las aplicaciones**:
+### Build
+- **Build all applications**:
   ```bash
   pnpm build:apps
   ```
-- **Construir librerías**:
+- **Build libraries**:
   ```bash
   pnpm build:libs
   ```
 
 ### Testing
-- **Ejecutar todos los tests**:
+- **Run all tests**:
   ```bash
   pnpm test:all
   ```
-- **Ejecutar tests de un proyecto** (reemplaza `$PROJECT`):
+- **Run tests for a specific project** (replace `$PROJECT`):
   ```bash
   pnpm test:project --PROJECT=podcast
   ```
-- **Ejecutar pruebas con interfaz gráfica de Vitest**: (reemplaza `$PROJECT`):
+- **Run tests with the Vitest UI** (replace `$PROJECT`):
   ```bash
   pnpm test:project:ui --PROJECT=podcast
   ```
 
-  #### **Con la consola de Nx****:
-  
+  #### **With Nx Console**:
+
   ![Nx console](readme-helpers/assets/images/vitest-ui-nx-console.gif)
 
-  #### **Con el terminal**:
-  
+  #### **With the terminal**:
+
   ![Nx console](readme-helpers/assets/images/vitest-ui-terminal.gif)
 
   #### **Vitest UI**
 
   ![Nx console](readme-helpers/assets/images/vitest-ui-dashboard.gif)
 
-### Nx Utilidades
-- **Visualizar el grafo de dependencias**:
+### Nx Utilities
+- **View the dependency graph**:
   ```bash
   pnpm graph
   ```
 
-### Nx Console**
-- **Adicionalmente, se puede instalar el plugin **Nx console** en el IDE de preferencia para acceder a todos los scripts desde el dashboard de Nx**:
-  
-![Nx console](readme-helpers/assets/images/nx-console.gif)
+  ![Nx console](readme-helpers/assets/images/nx-use.gif)
+
+### Nx Console
+- **Additionally, you can install the **Nx console** plugin in your preferred IDE to access all scripts from the Nx dashboard**:
+
+  ![Nx console](readme-helpers/assets/images/nx-console.gif)
 
 ---
 
 ## Deployment
-El proyecto se despliega automáticamente a **Vercel** al hacer un merge en la rama `main`.
+The project is automatically deployed to **Vercel** upon merging into the `main` branch.
 
 ---
 
-## Probar la solución
+## Test the Solution
 
-- Ambas aplicaciones (shell y podcast) se encuentran desplegadas en Vercel:
+- Both applications (shell and podcast) are deployed on Vercel:
   - **Shell**: [https://inditex-challenge-shell.vercel.app](hhttps://inditex-challenge-shell.vercel.app)
   - **Podcast**: [https://inditex-challenge-podcast.vercel.app](https://inditex-challenge-podcast.vercel.app)
 ####
-- En local, las aplicaciones se ejecutan en los puertos :
-  - En modo preview : con el comando `pnpm start:all:preview`
+- Locally, the applications run on the following ports:
+  - (1) In preview mode: using the command `pnpm start:all:preview`
     - **Shell**: http://localhost:4300
     - **Podcast**: http://localhost:4301
-  - En modo desarrollo : con el comando :
+  - (2) In development mode: using the command:
     - **Shell**: `pnpm start:project:dev --PROJECT=shell` http://localhost:4200
     - **Podcast**: `pnpm start:project:dev --PROJECT=podcast` http://localhost:4201
 ####
+- **IMPORTANT NOTES :**
+  - For module federation to work locally, you should use preview mode (1)
+  - In development mode (2), the applications work independently of each other
+####
 
-  ![Nx console](readme-helpers/assets/images/shell-demo.gif)
+![Nx console](readme-helpers/assets/images/shell-demo.gif)
 
 ___
 
-## Herramientas Destacadas
-- **Nx**:
-  - Manejo de cache y tareas inteligentes.
-  - Comandos personalizados en `tools/utils`.
-- **Vitest**: Configurado para pruebas unitarias y cobertura visual.
-- **Vercel**: Pipeline de CI/CD configurado para despliegues rápidos.
+## Featured Tools
+- [**Nx**](https://nx.dev):
+  - Cache management and smart tasks.
+  - Custom commands in `tools/utils`.
+- [**Vitest**](https://vitest.dev): Configured for unit tests and coverage visualization.
+- [**Vercel**](https://vercel.com): CI/CD pipeline set up for fast deployments.
 
-Para más detalles sobre las aplicaciones y librerías, revisa los archivos `README.md` en cada subdirectorio:
+For more details on the applications and libraries, check the `README.md` files in each subdirectory:
 
 - [Shell](./apps/shell/README.md)
 - [Podcast](./apps/podcast/README.md)

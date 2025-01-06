@@ -1,60 +1,61 @@
-# Herramientas Personalizadas
 
-## Descripción
-La carpeta **tools/** contiene scripts personalizados desarrollados con **Nx** para facilitar tareas comunes y mejorar la productividad en el monorepo.
+# Custom Tools
+
+## Description
+The **tools/** folder contains custom scripts developed with **Nx** to facilitate common tasks and improve productivity in the monorepo.
 
 ---
 
-## Scripts Disponibles
+## Available Scripts
 
 ### 1. **serve-multiple**
-- **Descripción**: Arranca múltiples aplicaciones (Shell y Podcast) en modo preview simultáneamente.
-- **Comando**:
+- **Description**: Starts multiple applications (Shell and Podcast) in preview mode simultaneously.
+- **Command**:
   ```bash
   pnpm start:all:preview
   ```
 
 ### 2. **build-apps**
-- **Descripción**: Realiza una limpieza de la cache de Nx y construye todas las aplicaciones (Shell y Podcast).
-- **Comando**:
+- **Description**: Clears the Nx cache and builds all applications (Shell and Podcast).
+- **Command**:
   ```bash
   pnpm build:apps
   ```
 
 ### 3. **build-libs**
-- **Descripción**: Limpia la cache de Nx y construye todas las librerías del Design System.
-- **Comando**:
+- **Description**: Clears the Nx cache and builds all the libraries in the Design System.
+- **Command**:
   ```bash
   pnpm build:libs
   ```
 
 ### 4. **test-all**
-- **Descripción**: Ejecuta las pruebas unitarias para todas las aplicaciones y librerías del workspace.
-- **Comando**:
+- **Description**: Runs unit tests for all applications and libraries in the workspace.
+- **Command**:
   ```bash
   pnpm test:all
   ```
 
 ### 5. **new-lib**
-- **Descripción**: Crea una nueva librería estándar con la estructura predefinida.
-- **Comando**:
+- **Description**: Creates a new standard library with the predefined structure.
+- **Command**:
   ```bash
   pnpm new:lib --name=my-lib
   ```
 
 ### 6. **new-cdk-lib**
-- **Descripción**: Crea una nueva librería para el Component Dev Kit (CDK) con la estructura predefinida.
-- **Comando**:
+- **Description**: Creates a new library for the Component Dev Kit (CDK) with the predefined structure.
+- **Command**:
   ```bash
   pnpm new:cdk:lib --name=my-cdk-lib
   ```
 
 ---
 
-## Notas
-1. Los scripts están configurados para trabajar con las capacidades de **Nx**, como cache inteligente y dependencias optimizadas.
-2. Todos los scripts se pueden ejecutar desde el directorio raíz del proyecto.
+## Notes
+1. The scripts are configured to work with **Nx** capabilities, such as smart caching and optimized dependencies.
+2. All scripts can be executed from the root directory of the project.
 
 ---
 
-Para más información sobre la configuración general del proyecto, consulta el README en el root.
+For more information about the general configuration of the project, refer to the root README.

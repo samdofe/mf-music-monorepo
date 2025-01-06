@@ -1,125 +1,126 @@
+
 # Podcast Application
 
-## Descripción
-La aplicación **Podcast** es un micro-frontend remoto que gestiona la lógica principal de la funcionalidad de podcasts, incluyendo:
-- Listado de los podcasts más populares.
-- Detalles de un podcast específico.
-- Detalles de episodios individuales con un reproductor de audio básico.
+## Description
+The **Podcast** application is a remote micro-frontend that handles the core podcast functionality, including:
+- Listing the most popular podcasts.
+- Details of a specific podcast.
+- Details of individual episodes with a basic audio player.
 
-Esta aplicación está diseñada para integrarse con el **Shell** mediante **Module Federation**.
+This application is designed to integrate with the **Shell** via **Module Federation**.
 
 ---
 
-## Estructura
-La estructura principal incluye:
+## Structure
+The main structure includes:
 
 ### **`src/`**
-Contiene el código fuente de la aplicación. Dentro de esta carpeta, se encuentran las siguientes subcarpetas y archivos:
+Contains the source code for the application. Within this folder, the following subfolders and files can be found:
 
-- **`src/api/`**: Contiene los archivos que gestionan las peticiones a la API utilizando `tanstack/react-query`. Aquí se centraliza toda la lógica de las consultas a la API para mantener el código organizado y desacoplado.
+- **`src/api/`**: Contains files that manage API requests using `tanstack/react-query`. All API query logic is centralized here to keep the code organized and decoupled.
 
-- **`src/app/`**: Es la carpeta raíz de la aplicación donde se encuentra la configuración general de la misma. Aquí se gestionan aspectos como la configuración global y la estructura del enrutado.
+- **`src/app/`**: The root folder of the application where its general configuration resides. This folder handles aspects like global configuration and routing structure.
 
-- **`src/assets/`**: Contiene todos los recursos estáticos de la aplicación, como imágenes, iconos y otros archivos que no forman parte del código, pero son necesarios para el funcionamiento y la interfaz de usuario.
+- **`src/assets/`**: Contains all the static assets for the application, such as images, icons, and other files that are not part of the code but are necessary for the functioning and user interface.
 
-- **`src/hooks/`**: Aquí se encuentran los hooks personalizados utilizados en toda la aplicación. Estos hooks encapsulan la lógica que puede ser reutilizada a través de los componentes, haciendo que el código sea más limpio y modular.
+- **`src/hooks/`**: This folder contains the custom hooks used throughout the application. These hooks encapsulate logic that can be reused across components, making the code cleaner and more modular.
 
-- **`src/layouts/`**: Contiene los diferentes layouts utilizados en la aplicación. Un layout es una plantilla de interfaz que se utiliza para estructurar las páginas y asegurar una apariencia coherente a través de la aplicación.
+- **`src/layouts/`**: Contains the different layouts used in the application. A layout is an interface template used to structure pages and ensure consistent appearance across the app.
 
-- **`src/models/`**: Aquí se definen los modelos de datos de la aplicación, que son utilizados para gestionar y validar la información. Los modelos permiten mantener la consistencia de los datos en todo el proyecto.
+- **`src/models/`**: Defines the data models for the application, which are used to manage and validate information. Models help maintain data consistency throughout the project.
 
-- **`src/pages/`**: Contiene las páginas de la aplicación, las cuales corresponden a las rutas definidas en el enrutado. Algunas de las páginas son:
-  - **episode-player**: Muestra un episodio individual de un podcast con su reproductor y descripción.
-  - **episodes-list**: Lista de episodios de un podcast específico.
-  - **podcasts-details**: Muestra los detalles de un podcast, incluyendo una lista de episodios.
-  - **podcasts-grid**: Muestra los podcasts más populares en un formato de cuadrícula.
-    Cada una de estas páginas maneja su propia lógica de presentación y carga de datos.
+- **`src/pages/`**: Contains the application pages, corresponding to routes defined in the routing configuration. Some of the pages include:
+  - **episode-player**: Displays an individual podcast episode with its player and description.
+  - **episodes-list**: List of episodes for a specific podcast.
+  - **podcasts-details**: Displays the details of a podcast, including a list of episodes.
+  - **podcasts-grid**: Displays the most popular podcasts in a grid format.
+    Each page manages its own data fetching and presentation logic.
 
-- **`src/routing/`**: Define y configura las rutas de la aplicación. Gestiona la navegación entre las distintas vistas de la SPA (Single Page Application), asegurando una experiencia de usuario fluida sin recargar la página.
+- **`src/routing/`**: Defines and configures the application routes. It manages navigation between views in the SPA (Single Page Application), ensuring a smooth user experience without page reloads.
 
-- **`src/store/`**: Contiene la gestión del estado de la aplicación, probablemente utilizando una librería de manejo de estado (como Redux o Zustand). Aquí se centraliza todo el estado global de la aplicación, permitiendo que los componentes puedan acceder a él de manera eficiente.
+- **`src/store/`**: Contains the application's state management, likely using a state management library (such as Redux or Zustand). All global application state is centralized here, allowing components to access it efficiently.
 
-- **`src/tests/`**: Configuración de los tests con Vitest. Aquí se configuran y organizan los tests unitarios, de integración y end-to-end para asegurar que la aplicación funciona correctamente y que cualquier cambio en el código no rompa funcionalidades existentes.
+- **`src/tests/`**: Configuration for tests using Vitest. Unit, integration, and end-to-end tests are organized and configured here to ensure the application functions correctly and that changes to the code don't break existing functionality.
 
-- **`src/ui/`**: Contiene los componentes comunes reutilizables en la aplicación, como botones, formularios, modales y otros elementos de la interfaz de usuario. Estos componentes están diseñados para ser reutilizados a lo largo de la aplicación, promoviendo la consistencia visual.
+- **`src/ui/`**: Contains reusable common UI components such as buttons, forms, modals, and other interface elements. These components are designed for reuse across the application to promote visual consistency.
 
-- **`vite.config.ts`**: Configuración para exponer la aplicación como remota.
+- **`vite.config.ts`**: Configuration for exposing the application as a remote micro-frontend.
 
 ---
 
 ## Scripts
-Desde el directorio raíz del proyecto:
+From the root directory of the project:
 
-### Desarrollo
-- **Arrancar la aplicación Podcast en modo desarrollo**:
+### Development
+- **Start the Podcast application in development mode**:
   ```bash
   pnpm start:project:dev --PROJECT=podcast
   ```
 
-- **Vista previa en modo producción**:
+- **Preview in production mode**:
   ```bash
   pnpm start:project:preview --PROJECT=podcast
   ```
 
-### Construcción
-- **Construir la aplicación**:
+### Build
+- **Build the application**:
   ```bash
   pnpm build:apps
   ```
 
 ### Testing
-- **Ejecutar pruebas unitarias**:
+- **Run unit tests**:
   ```bash
   pnpm test:project --PROJECT=podcast
   ```
-- **Ejecutar pruebas con interfaz gráfica de Vitest**:
+- **Run tests with Vitest UI**:
   ```bash
   pnpm test:project:ui --PROJECT=podcast
   ```
 
-  #### **Con la consola de Nx****:
+  #### **With Nx Console**:
 
   ![Nx console](../../readme-helpers/assets/images/vitest-ui-nx-console.gif)
 
-  #### **Con el terminal**:
+  #### **With the terminal**:
 
   ![Nx console](../../readme-helpers/assets/images/vitest-ui-terminal.gif)
 
   #### **Vitest UI**
-  
+
   ![Nx console](../../readme-helpers/assets/images/vitest-ui-dashboard.gif)
 
 
 ---
 
-## Detalles Técnicos
+## Technical Details
 ### Module Federation
-El archivo `vite.config.ts` declara la configuración necesaria para que esta aplicación sea consumida como un micro-frontend remoto por el Shell.
+The `vite.config.ts` file declares the necessary configuration for this application to be consumed as a remote micro-frontend by the Shell.
 
-### Funcionalidades
-1. **Listado de Podcasts**: Consume el API de Apple Podcasts y utiliza la librería `@inditex-challenge/api` para gestionar las peticiones.
-2. **Detalles de un Podcast**: Renderiza componentes reutilizables como **cdk-card** y **cdk-table** desde el design system.
-3. **Detalles de un Episodio**: Incluye un reproductor de audio HTML5 básico para reproducir episodios.
+### Features
+1. **Podcast Listing**: Consumes the Apple Podcasts API and uses the `@inditex-challenge/api` library to manage requests.
+2. **Podcast Details**: Renders reusable components such as **cdk-card** and **cdk-table** from the design system.
+3. **Episode Details**: Includes a basic HTML5 audio player to play episodes.
 
-### Dependencias
+### Dependencies
 
-La aplicación tiene dependencias con las librerías reutilizables:
-- Componentes del Design System (**cdk**) es importada desde la librería `@inditex-challenge/cdk`.
-- Api del Design System (**api**) es importada desde la librería `@inditex-challenge/api`.
-- Icons del Design System (**icons**) es importada desde la librería `@inditex-challenge/icons`.
-- Api del Design System (**router**) es importada desde la librería `@inditex-challenge/router`.
-- Api del Design System (**utils**) es importada desde la librería `@inditex-challenge/utils`.
+The application has dependencies on reusable libraries:
+- Design System Components (**cdk**) are imported from the `@inditex-challenge/cdk` library.
+- Design System API (**api**) is imported from the `@inditex-challenge/api` library.
+- Design System Icons (**icons**) are imported from the `@inditex-challenge/icons` library.
+- Design System Router (**router**) is imported from the `@inditex-challenge/router` library.
+- Design System Utilities (**utils**) are imported from the `@inditex-challenge/utils` library.
 
 ---
 
-## Notas
-1. Asegúrate de que la aplicación Shell esté ejecutándose para interactuar completamente con esta aplicación.
-2. Utiliza `pnpm graph` para visualizar las dependencias entre los micro-frontends y las librerías.
+## Notes
+1. Ensure the Shell application is running to fully interact with this application.
+2. Use `pnpm graph` to visualize dependencies between micro-frontends and libraries.
 
 ![Nx console](../../readme-helpers/assets/images/nx-use.gif)
 
-3. La funcionalidad de filtrado utiliza la librería `@inditex-challenge/utils` para operaciones comunes.
+3. The filtering functionality uses the `@inditex-challenge/utils` library for common operations.
 
 ---
 
-Para más información, consulta la documentación general en el README del root.
+For more information, consult the general documentation in the root README.

@@ -1,59 +1,60 @@
+
 # Shell Application
 
-## Descripción
-La aplicación **Shell** actúa como el host principal en la arquitectura de micro-frontends. Es responsable de:
-- Renderizar la cabecera común (**cdk-header**).
-- Administrar la navegación entre micro-frontends.
-- Cargar dinámicamente la aplicación remota (**Podcast**) usando **Module Federation**.
+## Description
+The **Shell** application acts as the main host in the micro-frontend architecture. It is responsible for:
+- Rendering the common header (**cdk-header**).
+- Managing navigation between micro-frontends.
+- Dynamically loading the remote application (**Podcast**) using **Module Federation**.
 
 ---
 
-## Estructura
-La estructura principal del proyecto incluye:
-- **`src/app/`**: Contiene los componentes principales de la aplicación.
-- **`src/assets/`**: Archivos estáticos y recursos.
-- **`src/layouts/`**: Contiene los diferentes layouts utilizados en la aplicación. Un layout es una plantilla de interfaz que se utiliza para estructurar las páginas y asegurar una apariencia coherente a través de la aplicación.
-- **`src/routing/`**: Define y configura las rutas de la aplicación. Gestiona la navegación entre las distintas vistas de la SPA (Single Page Application), asegurando una experiencia de usuario fluida sin recargar la página.
-- **`src/types/`**: Define los tipos de los modulos remotos
-- **`vte.config.ts`**: Configuración de Module Federation para declarar las dependencias remotas.
+## Structure
+The main project structure includes:
+- **`src/app/`**: Contains the main components of the application.
+- **`src/assets/`**: Static files and resources.
+- **`src/layouts/`**: Contains the different layouts used in the application. A layout is an interface template used to structure pages and ensure consistent appearance throughout the application.
+- **`src/routing/`**: Defines and configures the application routes. It manages navigation between different views of the SPA (Single Page Application), ensuring a smooth user experience without reloading the page.
+- **`src/types/`**: Defines types for remote modules.
+- **`vite.config.ts`**: Module Federation configuration to declare remote dependencies.
 
 ---
 
 ## Scripts
-Desde el directorio raíz del proyecto:
+From the root directory of the project:
 
-### Desarrollo
-- **Arrancar la aplicación Shell en modo desarrollo**:
+### Development
+- **Start the Shell application in development mode**:
   ```bash
   pnpm start:project:dev --PROJECT=shell
   ```
 
-- **Vista previa en modo producción**:
+- **Preview in production mode**:
   ```bash
   pnpm start:project:preview --PROJECT=shell
   ```
 
-### Construcción
-- **Construir la aplicación**:
+### Build
+- **Build the application**:
   ```bash
   pnpm build:apps
   ```
 
 ### Testing
-- **Ejecutar pruebas unitarias**:
+- **Run unit tests**:
   ```bash
   pnpm test:project --PROJECT=shell
   ```
-- **Ejecutar pruebas con interfaz gráfica de Vitest**:
+- **Run tests with Vitest UI**:
   ```bash
   pnpm test:project:ui --PROJECT=shell
   ```
 
-  #### **Con la consola de Nx****:
+  #### **With Nx Console**:
 
   ![Nx console](../../readme-helpers/assets/images/vitest-ui-nx-console.gif)
 
-  #### **Con el terminal**:
+  #### **With the terminal**:
 
   ![Nx console](../../readme-helpers/assets/images/vitest-ui-terminal.gif)
 
@@ -63,26 +64,26 @@ Desde el directorio raíz del proyecto:
 
 ---
 
-## Detalles Técnicos
+## Technical Details
 ### Module Federation
-El **Shell** declara la configuración de Module Federation en el archivo `vite.config.ts` para cargar dinámicamente la aplicación remota:
-- **Remota**: `podcast`.
-- **Componentes compartidos**: React, React DOM y dependencias relacionadas.
+The **Shell** declares the Module Federation configuration in the `vite.config.ts` file to dynamically load the remote application:
+- **Remote**: `podcast`.
+- **Shared components**: React, React DOM, and related dependencies.
 
-### Cabecera
-La cabecera reutilizable (**cdk-header**) es importada desde la librería `@inditex-challenge/cdk`.
+### Header
+The reusable header (**cdk-header**) is imported from the `@inditex-challenge/cdk` library.
 
-### Navegación
-Se utiliza la librería `@inditex-challenge/router` para gestionar las rutas dentro del Shell y delegar la navegación al micro-frontend remoto.
+### Navigation
+The `@inditex-challenge/router` library is used to manage routes within the Shell and delegate navigation to the remote micro-frontend.
 
 ---
 
-## Notas
-1. Asegúrate de que el servicio remoto (Podcast) esté ejecutándose antes de probar las funcionalidades compartidas.
-2. El comando `pnpm graph` puede ayudarte a visualizar las dependencias entre proyectos y librerías.
+## Notes
+1. Ensure the remote service (Podcast) is running before testing shared functionalities.
+2. The `pnpm graph` command can help you visualize the dependencies between projects and libraries.
 
 ![Nx console](../../readme-helpers/assets/images/nx-use.gif)
 
 ---
 
-Para más información, consulta la documentación general en el README del root.
+For more information, consult the general documentation in the root README.

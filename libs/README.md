@@ -1,70 +1,71 @@
+
 # Librerías del Design System
 
-## Descripción
-La carpeta **libs/** contiene las librerías reutilizables que forman el Design System del proyecto. Estas librerías encapsulan la lógica común y los componentes compartidos, promoviendo la reutilización y la consistencia entre las aplicaciones del monorepo.
+## Description
+The **libs/** folder contains the reusable libraries that form the project's Design System. These libraries encapsulate common logic and shared components, promoting reuse and consistency across the monorepo applications.
 
 ---
 
-## Librerías Principales
+## Main Libraries
 
 ### 1. **API**
-- **Descripción**: Encapsula las peticiones HTTP hacia las APIs externas, incluyendo la gestión de CORS mediante `allorigins.win`.
-- **Características**:
-  - Gestión del cliente de consultas (`react-query`).
-  - Métodos para recuperar podcasts y detalles.
+- **Description**: Encapsulates HTTP requests to external APIs, including CORS management via `allorigins.win`.
+- **Features**:
+  - Query client management (`react-query`).
+  - Methods for fetching podcasts and details.
 
 ### 2. **CDK (Component Dev Kit)**
-- **Descripción**: Exposición de componentes reutilizables.
-- **Componentes clave**:
-  - **cdk-card**: Renderiza detalles de un podcast.
-  - **cdk-header**: Cabecera principal utilizada en el Shell.
-  - **cdk-input-filter**: Filtro dinámico para la lista de podcasts.
-  - **cdk-table**: Lista de episodios.
-  - **cdk-thumbnail**: Miniaturas de los podcasts.
+- **Description**: Exposes reusable components.
+- **Key components**:
+  - **cdk-card**: Renders podcast details.
+  - **cdk-header**: Main header used in the Shell.
+  - **cdk-input-filter**: Dynamic filter for the podcast list.
+  - **cdk-table**: Episode list.
+  - **cdk-thumbnail**: Podcast thumbnails.
 
 ### 3. **Icons**
-- **Descripción**: Librería de iconos reutilizables.
-- **Características**:
-  - Exporta iconos SVG.
+- **Description**: Library of reusable icons.
+- **Features**:
+  - Exports SVG icons.
 
 ### 4. **Router**
-- **Descripción**: Centraliza la lógica de enrutamiento.
-- **Características**:
-  - Exporta componentes y hooks relacionados con `react-router-dom`.
+- **Description**: Centralizes routing logic.
+- **Features**:
+  - Exports components and hooks related to `react-router-dom`.
 
 ### 5. **Utils**
-- **Descripción**: Funcionalidades comunes para manejo de fechas, strings, y formatos.
+- **Description**: Common utilities for handling dates, strings, and formats.
 
 ---
 
 ## Scripts
-Desde el directorio raíz del proyecto:
+From the root directory of the project:
 
-### Construcción
-- **Construir todas las librerías**:
+### Build
+- **Build all libraries**:
   ```bash
   pnpm build:libs
   ```
 
 ### Testing
-- **Ejecutar pruebas de todas las librerías**:
+- **Run tests for all libraries**:
   ```bash
   pnpm test:all
   ```
-- **Ejecutar pruebas de una librería específica** (reemplaza `$PROJECT`):
+- **Run tests for a specific library** (replace `$PROJECT`):
   ```bash
   pnpm test:project --PROJECT=cdk-card
   ```
-- **Ejecutar pruebas con interfaz gráfica de Vitest**: (reemplaza `$PROJECT`):
+- **Run tests with Vitest UI**: (replace `$PROJECT`):
   ```bash
   pnpm test:project:ui --PROJECT=cdk-card
   ```
 
-  #### **Con la consola de Nx****:
+  #### **With Nx Console**:
 
   ![Nx console](../readme-helpers/assets/images/vitest-ui-nx-console.gif)
 
-  #### **Con el terminal**:
+  #### **With the terminal**:
 
   ![Nx console](../readme-helpers/assets/images/vitest-ui-terminal.gif)
 
@@ -72,26 +73,26 @@ Desde el directorio raíz del proyecto:
 
   ![Nx console](../readme-helpers/assets/images/vitest-ui-dashboard.gif)
 
-### Creación de Librerías
-- **Nueva librería estándar**:
+### Library Creation
+- **Create a new standard library**:
   ```bash
   pnpm new:lib --name=my-lib
   ```
-- **Nueva librería CDK**:
+- **Create a new CDK library**:
   ```bash
   pnpm new:cdk:lib --name=my-cdk-lib
   ```
 
 ---
 
-## Notas
-1. Las librerías están configuradas para ser consumidas tanto por las aplicaciones del monorepo como por futuros proyectos.
-2. Puedes usar `pnpm graph` para visualizar las relaciones entre las aplicaciones y librerías en el monorepo.
+## Notes
+1. The libraries are configured to be consumed both by the monorepo applications and by future projects.
+2. You can use `pnpm graph` to visualize the relationships between applications and libraries in the monorepo.
 
 ![Nx console](../readme-helpers/assets/images/nx-use.gif)
 
-3. La configuración de las librerías utiliza `Nx` para optimizar tareas con cache inteligente.
+3. Library configuration uses `Nx` to optimize tasks with smart caching.
 
 ---
 
-Para más detalles sobre la estructura y los componentes específicos, revisa los archivos individuales dentro de cada subdirectorio.
+For more details about the structure and specific components, refer to the individual files within each subdirectory.
