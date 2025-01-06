@@ -50,8 +50,8 @@ export default defineConfig({
     modulePreload: false,
     outDir: '../../dist/apps/shell',
     target: 'esnext',
-    minify: false,
-    sourcemap: true,
+    minify: true,
+    sourcemap: false,
     cssCodeSplit: false,
   },
   resolve: {
