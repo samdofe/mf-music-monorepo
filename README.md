@@ -74,8 +74,18 @@ Los scripts se ejecutan desde el directorio raíz:
   ```bash
   pnpm test:project:ui --PROJECT=podcast
   ```
+
+  #### **Con la consola de Nx****:
   
-![Nx console](readme-helpers/assets/images/vitest-ui-dashboard.gif)
+  ![Nx console](readme-helpers/assets/images/vitest-ui-nx-console.gif)
+
+  #### **Con el terminal**:
+  
+  ![Nx console](readme-helpers/assets/images/vitest-ui-terminal.gif)
+
+  #### **Vitest UI**
+
+  ![Nx console](readme-helpers/assets/images/vitest-ui-dashboard.gif)
 
 ### Nx Utilidades
 - **Visualizar el grafo de dependencias**:
@@ -83,7 +93,7 @@ Los scripts se ejecutan desde el directorio raíz:
   pnpm graph
   ```
 
-### Nx Console
+### Nx Console**
 - **Adicionalmente, se puede instalar el plugin **Nx console** en el IDE de preferencia para acceder a todos los scripts desde el dashboard de Nx**:
   
 ![Nx console](readme-helpers/assets/images/nx-console.gif)
