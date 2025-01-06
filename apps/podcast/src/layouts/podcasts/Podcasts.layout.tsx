@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { usePodcastsLoad } from '@api';
 import React from 'react';
-import { Loader } from '@ui';
+import { Loader, NoResults } from '@ui';
 import styles from './Podcasts.layout.module.scss';
 
 export const PodcastsLayout = ()=>{
@@ -12,9 +12,5 @@ export const PodcastsLayout = ()=>{
     <div className={styles['podcasts-layout']}>
       <Outlet />
     </div>
-  ) : (
-    <div>
-      <p>NO RESULTS FOUND</p>
-    </div>
-  );
+  ) : <NoResults />;
 }

@@ -1,8 +1,10 @@
 import { ThreeDotsScaleIcon } from '@inditex/icons';
 
+import styles from './Loader.module.scss';
+
 export const Loader = ()=>{
   return (
-    <div style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <div className={styles['loader']}>
       <ThreeDotsScaleIcon/>
     </div>
   )

@@ -1,12 +1,13 @@
 import React from 'react';
-import { RouteObject} from 'react-router-dom';
+import { Navigate, RouteObject } from 'react-router-dom';
 import { EpisodePlayerPage, EpisodesListPage, PodcastDetailsPage, PodcastsGridPage } from '@pages';
 import { PodcastsLayout } from '@layouts';
+import { RouteWrapper } from '@inditex/router';
 
 const routes: RouteObject[] = [
   {
     path: '/',
-    element: <PodcastsLayout /> ,
+    element: <RouteWrapper element={<PodcastsLayout />} />,
     children: [
       {
         path: '',
@@ -27,6 +28,10 @@ const routes: RouteObject[] = [
         ]
       }
     ]
+  },
+  {
+    path: '*',
+    element: <Navigate to="/" />
   }
 ];
 

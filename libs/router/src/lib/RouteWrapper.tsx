@@ -1,6 +1,7 @@
 import { ReactElement, Suspense } from 'react';
 import { Navigate } from 'react-router-dom';
 import { IRouteWrapperProps } from './router.model';
+import styles from './router.module.scss';
 
 export const RouteWrapper = ({
   element,
@@ -10,7 +11,7 @@ export const RouteWrapper = ({
   return isProtected ? (
     <Navigate to={fallback} />
     ) : (
-    <Suspense fallback={<div>Route is loading ... </div>}>
+    <Suspense fallback={<div className={styles['suspense-loading']}>LOADING ROUTE...</div>}>
       {element}
     </Suspense>
   )
