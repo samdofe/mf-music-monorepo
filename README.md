@@ -19,8 +19,7 @@ Para instalar las dependencias:
 ```bash
 pnpm install
 ```
-
----
+___
 
 ## Estructura del Monorepo
 - **`apps/`**: Contiene las aplicaciones principales.
@@ -36,7 +35,9 @@ pnpm install
 
 ## Front end System Design
 
-![Nx console](readme-helpers/assets/images/front-system-design.png)
+![Nx console](readme-helpers/assets/images/front-system-design.png) 
+
+---
 
 ## Scripts Disponibles
 Los scripts se ejecutan desde el directorio raíz:
@@ -44,7 +45,7 @@ Los scripts se ejecutan desde el directorio raíz:
 ### Desarrollo
 - **Arrancar todas las aplicaciones**:
   ```bash
-  pnpm start:all:dev
+  pnpm start:all:preview
   ```
 - **Arrancar una aplicación específica** (reemplaza `$PROJECT`):
   ```bash
@@ -104,6 +105,25 @@ Los scripts se ejecutan desde el directorio raíz:
 El proyecto se despliega automáticamente a **Vercel** al hacer un merge en la rama `main`.
 
 ---
+
+## Probar la solución
+
+- Ambas aplicaciones (shell y podcast) se encuentran desplegadas en Vercel:
+  - **Shell**: [https://inditex-challenge-shell.vercel.app](hhttps://inditex-challenge-shell.vercel.app)
+  - **Podcast**: [https://inditex-challenge-podcast.vercel.app](https://inditex-challenge-podcast.vercel.app)
+####
+- En local, las aplicaciones se ejecutan en los puertos :
+  - En modo preview : con el comando `pnpm start:all:preview`
+    - **Shell**: http://localhost:4300
+    - **Podcast**: http://localhost:4301
+  - En modo desarrollo : con el comando :
+    - **Shell**: `pnpm start:project:dev --PROJECT=shell` http://localhost:4200
+    - **Podcast**: `pnpm start:project:dev --PROJECT=podcast` http://localhost:4201
+####
+
+  ![Nx console](readme-helpers/assets/images/shell-demo.gif)
+
+___
 
 ## Herramientas Destacadas
 - **Nx**:
