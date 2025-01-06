@@ -8,4 +8,10 @@
   padding: 0 15%;
 }
 
+@media (width < 500px){
+  [id=podcast-root]{
+    padding: 0 5%;
+  }
+}
+
 
