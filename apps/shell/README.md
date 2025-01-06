@@ -49,6 +49,8 @@ Desde el directorio raíz del proyecto:
   pnpm test:project:ui --PROJECT=shell
   ```
 
+![Nx console](../../readme-helpers/assets/images/vitest-ui-dashboard.gif)
+
 ---
 
 ## Detalles Técnicos

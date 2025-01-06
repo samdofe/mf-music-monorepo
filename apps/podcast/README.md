@@ -76,6 +76,9 @@ Desde el directorio raíz del proyecto:
   ```bash
   pnpm test:project:ui --PROJECT=podcast
   ```
+  
+![Nx console](../../readme-helpers/assets/images/vitest-ui-dashboard.gif)
+
 
 ---
 
