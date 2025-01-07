@@ -112,7 +112,7 @@ The project is automatically deployed to **Vercel** upon merging into the `main`
 
 ---
 
-## Test the Solution
+## Try the Solution
 
 - Both applications (shell and podcast) are deployed on Vercel:
   - **Shell**: [https://mf-music-shell.vercel.app](hhttps://mf-music-shell.vercel.app)
