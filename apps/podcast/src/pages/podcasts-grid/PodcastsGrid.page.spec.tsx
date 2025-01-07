@@ -25,8 +25,8 @@ vi.mock('@store', async (importOriginal) => {
   }
 });
 
-vi.mock('@inditex/cdk', async (importOriginal) => {
-  const actual = await importOriginal<typeof import("@inditex/cdk")>();
+vi.mock('@sdf-design-system/cdk', async (importOriginal) => {
+  const actual = await importOriginal<typeof import("@sdf-design-system/cdk")>();
   return {
     ...actual,
     CdkInputFilter: mocks.CdkInputFilter

@@ -1,6 +1,6 @@
 import {useNavigate} from 'react-router-dom';
 import React, {ReactElement, useState} from 'react';
-import { CdkInputFilter, CdkThumbnail } from '@inditex/cdk';
+import { CdkInputFilter, CdkThumbnail } from '@sdf-design-system/cdk';
 import { usePodcastStore } from '@store';
 import styles from './PodcastsGrid.page.module.scss';
 import { useFilteredData } from '@hooks';

@@ -54,13 +54,13 @@
     "new-lib": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "nx g @nx/react:lib libs/$PROJECT --bundler=vite --publishable=true --importPath=@inditex/$PROJECT"
+        "command": "nx g @nx/react:lib libs/$PROJECT --bundler=vite --publishable=true --importPath=@sdf-design-system/$PROJECT"
       }
     },
     "new-cdk-lib": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "nx g @nx/react:lib libs/cdk-libs/$PROJECT --bundler=vite --publishable=true --importPath=@inditex/$PROJECT"
+        "command": "nx g @nx/react:lib libs/cdk-libs/$PROJECT --bundler=vite --publishable=true --importPath=@sdf-design-system/$PROJECT"
       }
     }
   }

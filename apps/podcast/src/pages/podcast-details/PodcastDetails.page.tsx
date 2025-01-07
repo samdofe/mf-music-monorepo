@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { Outlet, useNavigate, useParams } from 'react-router-dom';
 import DOMPurify from 'dompurify';
-import { CdkCard } from '@inditex/cdk';
+import { CdkCard } from '@sdf-design-system/cdk';
 import {usePodcastDetails} from '@api';
 import {
   useGetPodcastsSelector,

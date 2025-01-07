@@ -1,7 +1,7 @@
 import {ReactNode} from 'react';
 import {ICdkTableConfig} from './cdk-table.model';
 import styles from './cdk-table.module.scss';
-import { cdkUtilsFieldFormatter } from '@inditex/utils';
+import { cdkUtilsFieldFormatter } from '@sdf-design-system/utils';
 
 export function CdkTable<T>({headers, headersTemplateStyle, data, onRowClickHandler}: ICdkTableConfig<T>) {
   const handleRowClick = (selectedItem: T)=>{

@@ -1,5 +1,5 @@
 {
-  "name": "@inditex/cdk-card",
+  "name": "@sdf-design-system/cdk-card",
   "version": "0.0.1",
   "main": "./index.js",
   "types": "./index.d.ts",

@@ -1,5 +1,5 @@
 import { Outlet, useNavigate, useNavigation } from 'react-router-dom';
-import { CdkHeader } from '@inditex/cdk';
+import { CdkHeader } from '@sdf-design-system/cdk';
 import styles from './shell.layout.module.scss';
 
 export const ShellLayoutComponent = () => {

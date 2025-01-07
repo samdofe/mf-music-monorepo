@@ -1,8 +1,8 @@
 
-# Inditex Challenge
+# Module Federation Music App
 
 ## Overview
-This repository contains the solution to the Inditex technical challenge for the Tech Lead Frontend position. The solution implements a **micro-frontend** architecture using an integrated monorepo managed with **Nx**, along with modern technologies such as **React**, **Vite**, **Vitest**, and **Module Federation**.
+This mono-repository contains the solution of a technical challenge for the Tech Lead Frontend position. The solution implements a **micro-frontend** architecture using an integrated monorepo managed with **Nx**, along with modern technologies such as **React**, **Vite**, **Vitest**, and **Module Federation**.
 
 ## Key Features
 - **Micro-frontends**: The solution is divided into individual applications (shell and podcast) with a modular architecture.
@@ -112,8 +112,8 @@ The project is automatically deployed to **Vercel** upon merging into the `main`
 ## Test the Solution
 
 - Both applications (shell and podcast) are deployed on Vercel:
-  - **Shell**: [https://inditex-challenge-shell.vercel.app](hhttps://inditex-challenge-shell.vercel.app)
-  - **Podcast**: [https://inditex-challenge-podcast.vercel.app](https://inditex-challenge-podcast.vercel.app)
+  - **Shell**: [https://mf-music-shell.vercel.app](hhttps://mf-music-shell.vercel.app)
+  - **Podcast**: [https://mf-music-podcast.vercel.app](https://mf-music-podcast.vercel.app)
 ####
 - Locally, the applications run on the following ports:
   - (1) In preview mode: using the command `pnpm start:all:preview`
@@ -133,7 +133,7 @@ The project is automatically deployed to **Vercel** upon merging into the `main`
 ___
 
 ## Git Repository
-- [**GITHUB** - inditex-challenge](https://github.com/samdofe/inditex-challenge): 
+- [**GITHUB** - mf-music-monorepo](https://github.com/samdofe/mf-music-monorepo): 
   - The solution is in a private repository. Please contact [the author](https://github.com/samdofe) to request access.
   - You can also have a looked at the PR's tab to see the evolution of the solution
 ####

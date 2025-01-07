@@ -1,4 +1,4 @@
-import { api } from '@inditex/api';
+import { api } from '@sdf-design-system/api';
 import { IPodcast } from '@models';
 const {VITE_ITUNES_API_DOMAIN, VITE_PODCAST_LOAD_API_CONTEXT} = import.meta.env;
 

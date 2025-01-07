@@ -1,5 +1,5 @@
 {
-  "name": "@inditex/cdk-thumbnail",
+  "name": "@sdf-design-system/cdk-thumbnail",
   "version": "0.0.1",
   "main": "./index.js",
   "types": "./index.d.ts",

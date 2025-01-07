@@ -1,7 +1,7 @@
-import { CdkTable, ICdkTableConfig } from '@inditex/cdk-table';
+import { CdkTable, ICdkTableConfig } from '@sdf-design-system/cdk-table';
 import { BoxTitle } from '@ui';
 import { IEpisode } from '@models';
-import { DATE_FORMATS, TIME_FORMATS } from '@inditex/utils';
+import { DATE_FORMATS, TIME_FORMATS } from '@sdf-design-system/utils';
 import { useGetEpisodesListSelector } from '@store';
 import { useNavigate } from 'react-router-dom';
 

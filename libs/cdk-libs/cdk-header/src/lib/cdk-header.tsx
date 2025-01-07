@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { Pulse3Icon } from '@inditex/icons';
+import { Pulse3Icon } from '@sdf-design-system/icons';
 import styles from './cdk-header.module.scss';
 
 export function CdkHeader({title, showIcon=false, titleClickHandler}: {title: string, showIcon?: boolean, titleClickHandler: ()=>void}): ReactElement {

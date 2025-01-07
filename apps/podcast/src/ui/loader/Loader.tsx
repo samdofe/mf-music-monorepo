@@ -1,4 +1,4 @@
-import { ThreeDotsScaleIcon } from '@inditex/icons';
+import { ThreeDotsScaleIcon } from '@sdf-design-system/icons';
 
 import styles from './Loader.module.scss';
 

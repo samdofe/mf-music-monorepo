@@ -71,10 +71,10 @@ The **Shell** declares the Module Federation configuration in the `vite.config.t
 - **Shared components**: React, React DOM, and related dependencies.
 
 ### Header
-The reusable header (**cdk-header**) is imported from the `@inditex-challenge/cdk` library.
+The reusable header (**cdk-header**) is imported from the `@sdf-design-system/cdk` library.
 
 ### Navigation
-The `@inditex-challenge/router` library is used to manage routes within the Shell and delegate navigation to the remote micro-frontend.
+The `@sdf-design-system/router` library is used to manage routes within the Shell and delegate navigation to the remote micro-frontend.
 
 ---
 

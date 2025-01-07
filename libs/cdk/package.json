@@ -1,5 +1,5 @@
 {
-  "name": "@inditex/cdk",
+  "name": "@sdf-design-system/cdk",
   "version": "0.0.1",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -11,10 +11,10 @@
     }
   },
   "dependencies": {
-    "@inditex/cdk-card": "workspace:0.0.1",
-    "@inditex/cdk-header": "workspace:0.0.1",
-    "@inditex/cdk-input-filter": "workspace:0.0.1",
-    "@inditex/cdk-table": "workspace:0.0.1",
-    "@inditex/cdk-thumbnail": "workspace:0.0.1"
+    "@sdf-design-system/cdk-card": "workspace:0.0.1",
+    "@sdf-design-system/cdk-header": "workspace:0.0.1",
+    "@sdf-design-system/cdk-input-filter": "workspace:0.0.1",
+    "@sdf-design-system/cdk-table": "workspace:0.0.1",
+    "@sdf-design-system/cdk-thumbnail": "workspace:0.0.1"
   }
 }

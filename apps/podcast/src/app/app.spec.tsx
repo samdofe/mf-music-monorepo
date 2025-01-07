@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import App from './app';
-import { RouterTestProviders } from '@inditex/router';
+import { RouterTestProviders } from '@sdf-design-system/router';
 
 const mocks = vi.hoisted(() => {
   return {

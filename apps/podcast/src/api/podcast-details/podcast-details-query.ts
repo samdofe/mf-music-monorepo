@@ -1,4 +1,4 @@
-import {api} from '@inditex/api';
+import {api} from '@sdf-design-system/api';
 const {VITE_ITUNES_API_DOMAIN, VITE_PODCAST_DETAILS_API_CONTEXT} = import.meta.env;
 
 export const podcastDetailQuery = async (podcastId: string | number) => {

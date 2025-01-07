@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate, RouteObject } from 'react-router-dom';
 import { EpisodePlayerPage, EpisodesListPage, PodcastDetailsPage, PodcastsGridPage } from '@pages';
 import { PodcastsLayout } from '@layouts';
-import { RouteWrapper } from '@inditex/router';
+import { RouteWrapper } from '@sdf-design-system/router';
 
 const routes: RouteObject[] = [
   {

@@ -1,5 +1,5 @@
 
-# Podcast Application
+# Podcast Remote Application
 
 ## Description
 The **Podcast** application is a remote micro-frontend that handles the core podcast functionality, including:
@@ -98,18 +98,18 @@ From the root directory of the project:
 The `vite.config.ts` file declares the necessary configuration for this application to be consumed as a remote micro-frontend by the Shell.
 
 ### Features
-1. **Podcast Listing**: Consumes the Apple Podcasts API and uses the `@inditex-challenge/api` library to manage requests.
+1. **Podcast Listing**: Consumes the Apple Podcasts API and uses the `@sdf-design-system/api` library to manage requests.
 2. **Podcast Details**: Renders reusable components such as **cdk-card** and **cdk-table** from the design system.
 3. **Episode Details**: Includes a basic HTML5 audio player to play episodes.
 
 ### Dependencies
 
 The application has dependencies on reusable libraries:
-- Design System Components (**cdk**) are imported from the `@inditex-challenge/cdk` library.
-- Design System API (**api**) is imported from the `@inditex-challenge/api` library.
-- Design System Icons (**icons**) are imported from the `@inditex-challenge/icons` library.
-- Design System Router (**router**) is imported from the `@inditex-challenge/router` library.
-- Design System Utilities (**utils**) are imported from the `@inditex-challenge/utils` library.
+- Design System Components (**cdk**) are imported from the `@sdf-design-system/cdk` library.
+- Design System API (**api**) is imported from the `@sdf-design-system/api` library.
+- Design System Icons (**icons**) are imported from the `@sdf-design-system/icons` library.
+- Design System Router (**router**) is imported from the `@sdf-design-system/router` library.
+- Design System Utilities (**utils**) are imported from the `@sdf-design-system/utils` library.
 
 ---
 
@@ -119,7 +119,7 @@ The application has dependencies on reusable libraries:
 
 ![Nx console](../../readme-helpers/assets/images/nx-use.gif)
 
-3. The filtering functionality uses the `@inditex-challenge/utils` library for common operations.
+3. The filtering functionality uses the `@sdf-design-system/utils` library for common operations.
 
 ---
 

@@ -174,19 +174,19 @@ importers:
 
   libs/cdk:
     dependencies:
-      '@inditex/cdk-card':
+      '@sdf-design-system/cdk-card':
         specifier: workspace:0.0.1
         version: link:../cdk-libs/cdk-card
-      '@inditex/cdk-header':
+      '@sdf-design-system/cdk-header':
         specifier: workspace:0.0.1
         version: link:../cdk-libs/cdk-header
-      '@inditex/cdk-input-filter':
+      '@sdf-design-system/cdk-input-filter':
         specifier: workspace:0.0.1
         version: link:../cdk-libs/cdk-input-filter
-      '@inditex/cdk-table':
+      '@sdf-design-system/cdk-table':
         specifier: workspace:0.0.1
         version: link:../cdk-libs/cdk-table
-      '@inditex/cdk-thumbnail':
+      '@sdf-design-system/cdk-thumbnail':
         specifier: workspace:0.0.1
         version: link:../cdk-libs/cdk-thumbnail
 
@@ -194,7 +194,7 @@ importers:
 
   libs/cdk-libs/cdk-header:
     dependencies:
-      '@inditex/icons':
+      '@sdf-design-system/icons':
         specifier: workspace:0.0.1
         version: link:../../icons
 
@@ -202,7 +202,7 @@ importers:
 
   libs/cdk-libs/cdk-table:
     dependencies:
-      '@inditex/utils':
+      '@sdf-design-system/utils':
         specifier: workspace:0.0.1
         version: link:../../utils
 
