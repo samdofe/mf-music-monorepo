@@ -54,12 +54,12 @@ From the root directory of the project:
 ### Development
 - **Start the Podcast application in development mode**:
   ```bash
-  pnpm start:project:dev --PROJECT=podcast
+  PROJECT=podcast pnpm start:project:dev 
   ```
 
 - **Preview in production mode**:
   ```bash
-  pnpm start:project:preview --PROJECT=podcast
+  PROJECT=podcast pnpm start:project:preview 
   ```
 
 ### Build
@@ -71,11 +71,11 @@ From the root directory of the project:
 ### Testing
 - **Run unit tests**:
   ```bash
-  pnpm test:project --PROJECT=podcast
+  PROJECT=podcast pnpm test:project
   ```
 - **Run tests with Vitest UI**:
   ```bash
-  pnpm test:project:ui --PROJECT=podcast
+  PROJECT=podcast pnpm test:project:ui
   ```
 
   #### **With Nx Console**:

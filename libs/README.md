@@ -54,11 +54,11 @@ From the root directory of the project:
   ```
 - **Run tests for a specific library** (replace `$PROJECT`):
   ```bash
-  pnpm test:project --PROJECT=cdk-card
+  PROJECT=cdk-card pnpm test:project
   ```
 - **Run tests with Vitest UI**: (replace `$PROJECT`):
   ```bash
-  pnpm test:project:ui --PROJECT=cdk-card
+  PROJECT=cdk-card pnpm test:project:ui
   ```
 
   #### **With Nx Console**:

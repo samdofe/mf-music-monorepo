@@ -50,7 +50,7 @@ The scripts are executed from the root directory:
   ```
 - **Start a specific application** (replace `$PROJECT`):
   ```bash
-  pnpm start:project:dev --PROJECT=shell
+  PROJECT=shell pnpm start:project:dev
   ```
 
 ### Build
@@ -70,11 +70,11 @@ The scripts are executed from the root directory:
   ```
 - **Run tests for a specific project** (replace `$PROJECT`):
   ```bash
-  pnpm test:project --PROJECT=podcast
+  PROJECT=podcast pnpm test:project
   ```
 - **Run tests with the Vitest UI** (replace `$PROJECT`):
   ```bash
-  pnpm test:project:ui --PROJECT=podcast
+  PROJECT=podcast pnpm test:project:ui
   ```
 
   #### **With Nx Console**:
@@ -91,11 +91,14 @@ The scripts are executed from the root directory:
 
 ### Nx Utilities
 - **View the dependency graph**:
-  ```bash
-  pnpm graph
-  ```
+  - Nx understands your workspace as a collection of projects
+  - The projects in the workspace have dependencies between them and form a graph known as the **Project Graph**
+  - This project graph allows you to interactively explore your workspace through a UI
+    ```bash
+    pnpm graph
+    ```
 
-  ![Nx console](readme-helpers/assets/images/nx-use.gif)
+    ![Nx console](readme-helpers/assets/images/nx-use.gif)
 
 ### Nx Console
 - **Additionally, you can install the **Nx console** plugin in your preferred IDE to access all scripts from the Nx dashboard**:
@@ -120,8 +123,8 @@ The project is automatically deployed to **Vercel** upon merging into the `main`
     - **Shell**: http://localhost:4300
     - **Podcast**: http://localhost:4301
   - (2) In development mode: using the command:
-    - **Shell**: `pnpm start:project:dev --PROJECT=shell` http://localhost:4200
-    - **Podcast**: `pnpm start:project:dev --PROJECT=podcast` http://localhost:4201
+    - **Shell**: `PROJECT=shell pnpm start:project:dev` http://localhost:4200
+    - **Podcast**: `PROJECT=podcast pnpm start:project:dev` http://localhost:4201
 ####
 - **IMPORTANT NOTES :**
   - For module federation to work locally, you should use preview mode (1)
