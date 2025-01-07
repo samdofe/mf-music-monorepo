@@ -115,7 +115,7 @@ The project is automatically deployed to **Vercel** upon merging into the `main`
 ## Try the Solution
 
 - Both applications (shell and podcast) are deployed on Vercel:
-  - **Shell**: [https://mf-music-shell.vercel.app](hhttps://mf-music-shell.vercel.app)
+  - **Shell**: [https://mf-music-shell.vercel.app](https://mf-music-shell.vercel.app)
   - **Podcast**: [https://mf-music-podcast.vercel.app](https://mf-music-podcast.vercel.app)
 ####
 - Locally, the applications run on the following ports:
